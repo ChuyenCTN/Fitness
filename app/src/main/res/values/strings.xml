@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Fitness</string>
+
+    <string name="txt_label1_splash">Work out at home!</string>
+    <string name="txt_label2_splash">Make your training to the next level\nand become a BEAST</string>
+    <string name="title_activity_splash">SplashActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+</resources>
