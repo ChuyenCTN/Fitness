@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/tvStep1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen56"
+        android:text="@string/txt_step_1_4"
+        android:textSize="@dimen/sp20"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imgStep1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen250"
+        android:layout_marginHorizontal="@dimen/dimen90"
+        android:layout_marginTop="@dimen/dimen106"
+        android:src="@drawable/img_step1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvStep1" />
+
+    <TextView
+        android:id="@+id/tvWelcomeStep1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen56"
+        android:gravity="center"
+        android:text="@string/txt_welcome_step1"
+        android:textSize="@dimen/sp24"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgStep1" />
+
+    <TextView
+        android:id="@+id/tvContentStep1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dimen132"
+        android:layout_marginTop="@dimen/dimen18"
+        android:gravity="center"
+        android:text="@string/txt_content_step1"
+        android:textColor="@color/color_text_content_1"
+        android:textSize="@dimen/sp16"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvWelcomeStep1" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

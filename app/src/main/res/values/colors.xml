@@ -15,4 +15,7 @@
     <color name="light_blue_A200">#FF40C4FF</color>
     <color name="light_blue_A400">#FF00B0FF</color>
     <color name="black_overlay">#66000000</color>
+    <color name="color_un_selected_dot">#E0DCF6</color>
+    <color name="color_selected_dot">#7065E4</color>
+    <color name="color_text_content_1">#7278A0</color>
 </resources>

@@ -6,4 +6,13 @@
     <string name="title_activity_splash">SplashActivity</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="txt_step_1_4">Step 1 of 4</string>
+    <string name="txt_step_2_4">Step 2 of 4</string>
+    <string name="txt_step_3_4">Step 3 of 4</string>
+    <string name="txt_step_4_4">Step 4 of 4</string>
+    <string name="txt_welcome_step1">Welcome to<br /><font color='#7165E3'>Fitness</font> Application</string>
+    <string name="txt_content_step1">Personalized workouts will help you gain strength, get in better shape and embrace a healthy lifestyle</string>
+    <string name="txt_get_started">Get started</string>
+
+
 </resources>
