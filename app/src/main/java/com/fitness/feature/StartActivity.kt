@@ -1,24 +1,40 @@
 package com.fitness.feature
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
 import androidx.viewpager.widget.ViewPager
 import com.fitness.R
 import com.zhpan.indicator.enums.IndicatorSlideMode
 import com.zhpan.indicator.enums.IndicatorStyle
 import kotlinx.android.synthetic.main.activity_start.*
 import android.util.TypedValue
-
-
+import android.view.Window
+import android.view.WindowManager
+import com.fitness.MainActivity
 
 
 class StartActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        getWindow().setFlags(
+            WindowManager.LayoutParams.FLAG_FULLSCREEN,
+            WindowManager.LayoutParams.FLAG_FULLSCREEN
+        );
         setContentView(R.layout.activity_start)
 
         setupViewPager(vpStart)
+
+
+        Handler().postDelayed(
+            Runnable {
+                startActivity(Intent(this, MainActivity::class.java))
+                finish()
+            }, 5000
+        )
     }
 
     private fun setupViewPager(viewPager: ViewPager) {
@@ -31,13 +47,8 @@ class StartActivity : AppCompatActivity() {
         viewPager.adapter = adapter;
         viewPager.offscreenPageLimit = 4
 
-        val normalWidth = TypedValue.applyDimension(
-            TypedValue.COMPLEX_UNIT_DIP, resources.getDimension(R.dimen.dimen21),
-            getResources().getDisplayMetrics()
-        )
-
         indicatorView.apply {
-            setSliderColor(R.color.color_un_selected_dot, R.color.color_selected_dot)
+
             setSliderWidth(resources.getDimension(R.dimen.dimen21),resources.getDimension(R.dimen.dimen21))
             setSliderHeight(resources.getDimension(R.dimen.dimen6))
             setSlideMode(IndicatorSlideMode.SMOOTH)

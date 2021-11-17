@@ -1,7 +1,139 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:background="@color/white"
     android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen34"
+        android:layout_marginTop="@dimen/dimen59"
+        android:src="@drawable/ic_back"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvStep2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen56"
+        android:fontFamily="@font/roboto_regular"
+        android:text="@string/txt_step_2_4"
+        android:textColor="@color/color_text_step"
+        android:textSize="@dimen/sp20"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvStep2Label1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen125"
+        android:fontFamily="@font/roboto_light"
+        android:text="@string/txt_step2_label_1"
+        android:textColor="@color/color_content_step1"
+        android:textSize="@dimen/sp18"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvStep2" />
+
+    <TextView
+        android:id="@+id/tvStep2Label2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen8"
+        android:fontFamily="@font/roboto_medium"
+        android:text="@string/txt_step2_label_1"
+        android:textColor="@color/color_wellcome_step1"
+        android:textSize="@dimen/sp24"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvStep2Label1" />
+
+    <LinearLayout
+        android:id="@+id/layoutBeginer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dimen63"
+        android:layout_marginTop="@dimen/dimen32"
+        android:background="@drawable/bg_card_step_2"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/dimen24"
+        android:paddingTop="@dimen/dimen18"
+        android:paddingBottom="@dimen/dimen16"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvStep2Label2">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen8"
+            android:fontFamily="@font/roboto_medium"
+            android:text="@string/txt_beginer"
+            android:textColor="@color/color_text_step"
+            android:textSize="@dimen/sp20"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvStep2Label1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen4"
+            android:fontFamily="@font/roboto_light"
+            android:text="@string/txt_step2_label_3"
+            android:textColor="@color/color_content_step1"
+            android:textSize="@dimen/sp14"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvStep2Label1" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutIntermedate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dimen63"
+        android:layout_marginTop="@dimen/dimen30"
+        android:background="@drawable/bg_card_step_2"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/dimen24"
+        android:paddingTop="@dimen/dimen18"
+        android:paddingBottom="@dimen/dimen16"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutBeginer">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen8"
+            android:fontFamily="@font/roboto_medium"
+            android:text="@string/txt_intermediate"
+            android:textColor="@color/color_text_step"
+            android:textSize="@dimen/sp20"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvStep2Label1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen4"
+            android:fontFamily="@font/roboto_light"
+            android:text="@string/txt_step2_label_5"
+            android:textColor="@color/color_content_step1"
+            android:textSize="@dimen/sp14"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvStep2Label1" />
+
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

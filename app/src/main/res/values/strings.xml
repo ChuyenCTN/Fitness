@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">Fitness</string>
 
     <string name="txt_label1_splash">Work out at home!</string>
@@ -10,9 +10,27 @@
     <string name="txt_step_2_4">Step 2 of 4</string>
     <string name="txt_step_3_4">Step 3 of 4</string>
     <string name="txt_step_4_4">Step 4 of 4</string>
-    <string name="txt_welcome_step1">Welcome to<br /><font color='#7165E3'>Fitness</font> Application</string>
-    <string name="txt_content_step1">Personalized workouts will help you gain strength, get in better shape and embrace a healthy lifestyle</string>
+    <string name="txt_welcome_step1"><font color='#1B1C2E'>Welcome to</font>\n<font color='#7165E3'>Fitness</font> <font color='#1B1C2E'>Application</font></string>
+    <string name="txt_content_step1">Personalized workouts will help you\ngain strength, get in better shape and\nembrace a healthy lifestyle</string>
     <string name="txt_get_started">Get started</string>
+    <string name="txt_step2_label_1">Let us know you better</string>
+    <string name="txt_step2_label_2">Select your fitness level</string>
+    <string name="txt_step2_label_3">You are new to fitness training</string>
+
+    <string name="txt_step2_label_5">You have been training regularly</string>
+    <string name="txt_step2_label_6">Advanced</string>
+    <string name="txt_step2_label_7" tools:ignore="StringEscaping">You’re fit and ready for an intensive workout plan</string>
+    <string name="txt_step2_label_8">I’m not sure</string>
+    <string name="txt_step2_label_9"></string>
+
+
+    <string name="txt_beginer">Beginer</string>
+    <string name="txt_continue">CONTINUE</string>
+    <string name="txt_intermediate">Intermediate</string>
+    <string name="menu_training">Training</string>
+    <string name="menu_rountine">Rountine</string>
+    <string name="menu_report">Report</string>
+    <string name="menu_setting">Setting</string>
 
 
 </resources>
