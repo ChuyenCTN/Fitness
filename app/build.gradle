@@ -56,4 +56,10 @@ dependencies {
 
 //    implementation 'com.intuit.sdp:sdp-android:1.0.6'
 //    implementation 'com.intuit.ssp:ssp-android:1.0.6'
+
+    implementation 'com.mikhaellopez:circularprogressbar:3.1.0'
+    implementation ('com.github.thekhaeng:recycler-margin:1.2.1') {
+        exclude group: 'com.android.support', module: 'recyclerview-v7'
+    }
+
 }

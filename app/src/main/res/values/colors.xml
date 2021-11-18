@@ -23,4 +23,6 @@
     <color name="color_wellcome_step1">#1B1C2E</color>
     <color name="color_bg_gender">#DBDBDB</color>
     <color name="color_stroke_properties">#DCDCDC</color>
+    <color name="color_view_left_label_routine">#2E4ADC</color>
+
 </resources>

@@ -71,6 +71,7 @@
         app:layout_constraintRight_toRightOf="parent" />
 
     <ImageView
+        android:id="@+id/imgContentStep4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/dimen22"
@@ -79,5 +80,39 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvStep4Label2" />
+
+    <RatingBar
+        android:id="@+id/ratingStep4"
+        style="?attr/ratingBarStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dimen14"
+        android:layout_marginLeft="@dimen/dimen20"
+        android:layout_marginTop="@dimen/dimen56"
+        android:numStars="3"
+        app:layout_constraintLeft_toLeftOf="@+id/imgContentStep4"
+        app:layout_constraintTop_toTopOf="@+id/imgContentStep4" />
+
+    <TextView
+        android:id="@+id/tvBeginerStep4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_medium"
+        android:text="@string/txt_beginer"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp17"
+        app:layout_constraintLeft_toLeftOf="@+id/ratingStep4"
+        app:layout_constraintTop_toBottomOf="@+id/ratingStep4" />
+
+    <TextView
+        android:id="@+id/tvDayLeftStep4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_light"
+        android:text="30 days left"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp13"
+        app:layout_constraintLeft_toLeftOf="@+id/ratingStep4"
+        app:layout_constraintTop_toBottomOf="@+id/tvBeginerStep4" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

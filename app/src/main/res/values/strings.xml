@@ -25,6 +25,9 @@
     <string name="txt_step3_label_2">Let us know about you to speed up the\nresult, Get fit with your personal workout plan!</string>
     <string name="txt_step4_label_1">Your plan is ready!</string>
     <string name="txt_step4_label_2">Your change starts today!</string>
+    <string name="txt_routine_label_1">Quarantine at home</string>
+    <string name="txt_routine_label_2">Trainning goal</string>
+    <string name="txt_routine_label_3">Guess you might need</string>
 
     <string name="txt_beginer">Beginer</string>
     <string name="txt_continue">Continue</string>
@@ -41,5 +44,6 @@
     <string name="txt_gender">Gender</string>
     <string name="txt_male">Male</string>
     <string name="txt_female">Female</string>
+    <string name="txt_title_training"><font color='#7165E3'>Fitness</font> <font color='#1B1C2E'>Workout</font> </string>
 
 </resources>

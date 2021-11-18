@@ -1,4 +1,4 @@
-package com.fitness.feature
+package com.fitness.adapter
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dimen60"
+    android:layout_marginBottom="@dimen/dimen16"
+    android:background="@drawable/bg_item_list_training"
+    android:paddingLeft="@dimen/dimen14"
+    android:paddingRight="@dimen/dimen18">
+
+    <ImageView
+        android:id="@+id/imgLeftItemTraining"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:src="@drawable/ic_left_item_training" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginHorizontal="@dimen/dimen12"
+        android:layout_toLeftOf="@+id/progreesItemTraining"
+        android:layout_toRightOf="@+id/imgLeftItemTraining"
+        android:gravity="left"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvDayItemTraining"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:fontFamily="@font/roboto_medium"
+            android:maxLines="1"
+            android:text="Day 1"
+            android:textColor="@color/color_text_step"
+            android:textSize="@dimen/sp16" />
+
+        <TextView
+            android:id="@+id/tvTimeItemTraining"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:fontFamily="@font/roboto_light"
+            android:maxLines="1"
+            android:text="Day 1"
+            android:textColor="@color/color_text_content_1"
+            android:textSize="@dimen/sp12" />
+
+    </LinearLayout>
+
+    <com.mikhaellopez.circularprogressbar.CircularProgressBar
+        android:id="@+id/progreesItemTraining"
+        android:layout_width="@dimen/dimen46"
+        android:layout_height="@dimen/dimen46"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        app:cpb_background_progressbar_color_end="@color/color_text_step"
+        app:cpb_background_progressbar_color_start="@color/color_text_step"
+        app:cpb_progress="50"
+        app:cpb_progressbar_color="@color/color_text_step"
+        app:cpb_progressbar_width="@dimen/dimen2" />
+
+    <TextView
+        android:id="@+id/tvPercentValueItemTraining"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/progreesItemTraining"
+        android:layout_alignTop="@+id/progreesItemTraining"
+        android:layout_alignRight="@+id/progreesItemTraining"
+        android:layout_alignBottom="@+id/progreesItemTraining"
+        android:fontFamily="@font/roboto_regular"
+        android:gravity="center"
+        android:text="0%"
+        android:textColor="@color/color_text_step"
+        android:textSize="@dimen/sp12" />
+</RelativeLayout>
