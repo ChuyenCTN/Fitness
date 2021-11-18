@@ -9,10 +9,8 @@ import com.fitness.R
 import com.zhpan.indicator.enums.IndicatorSlideMode
 import com.zhpan.indicator.enums.IndicatorStyle
 import kotlinx.android.synthetic.main.activity_start.*
-import android.util.TypedValue
 import android.view.Window
 import android.view.WindowManager
-import com.fitness.MainActivity
 
 
 class StartActivity : AppCompatActivity() {
@@ -29,12 +27,12 @@ class StartActivity : AppCompatActivity() {
         setupViewPager(vpStart)
 
 
-        Handler().postDelayed(
-            Runnable {
-                startActivity(Intent(this, MainActivity::class.java))
-                finish()
-            }, 5000
-        )
+//        Handler().postDelayed(
+//            Runnable {
+//                startActivity(Intent(this, MainActivity::class.java))
+//                finish()
+//            }, 5000
+//        )
     }
 
     private fun setupViewPager(viewPager: ViewPager) {

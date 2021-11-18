@@ -14,12 +14,12 @@
 
     <com.zhpan.indicator.IndicatorView
         android:id="@+id/indicatorView"
-        app:vpi_slider_checked_color="@color/color_selected_dot"
         android:layout_width="wrap_content"
-        app:vpi_slider_normal_color="@color/color_un_selected_dot"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_margin="@dimen/dimen41" />
+        android:layout_margin="@dimen/dimen26"
+        app:vpi_slider_checked_color="@color/color_selected_dot"
+        app:vpi_slider_normal_color="@color/color_un_selected_dot" />
 
 </RelativeLayout>

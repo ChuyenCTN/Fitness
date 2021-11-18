@@ -7,8 +7,9 @@
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/dimen34"
-        android:layout_marginTop="@dimen/dimen59"
+        android:layout_marginLeft="@dimen/dimen18"
+        android:layout_marginTop="@dimen/dimen30"
+        android:clickable="true"
         android:src="@drawable/ic_back"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -17,11 +18,11 @@
         android:id="@+id/tvStep2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dimen56"
-        android:fontFamily="@font/roboto_regular"
+        android:layout_marginTop="@dimen/dimen30"
+        android:fontFamily="@font/roboto_bold"
         android:text="@string/txt_step_2_4"
         android:textColor="@color/color_text_step"
-        android:textSize="@dimen/sp20"
+        android:textSize="@dimen/sp18"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -30,11 +31,11 @@
         android:id="@+id/tvStep2Label1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dimen125"
-        android:fontFamily="@font/roboto_light"
+        android:layout_marginTop="@dimen/dimen100"
+        android:fontFamily="@font/roboto_regular"
         android:text="@string/txt_step2_label_1"
         android:textColor="@color/color_content_step1"
-        android:textSize="@dimen/sp18"
+        android:textSize="@dimen/sp16"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="@id/tvStep2" />
@@ -43,11 +44,11 @@
         android:id="@+id/tvStep2Label2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dimen8"
+        android:layout_marginTop="@dimen/dimen6"
         android:fontFamily="@font/roboto_medium"
-        android:text="@string/txt_step2_label_1"
+        android:text="@string/txt_step2_label_2"
         android:textColor="@color/color_wellcome_step1"
-        android:textSize="@dimen/sp24"
+        android:textSize="@dimen/sp20"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvStep2Label1" />
@@ -56,13 +57,14 @@
         android:id="@+id/layoutBeginer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="@dimen/dimen63"
-        android:layout_marginTop="@dimen/dimen32"
+        android:layout_marginHorizontal="@dimen/dimen30"
+        android:layout_marginTop="@dimen/dimen26"
         android:background="@drawable/bg_card_step_2"
+        android:clickable="true"
         android:orientation="vertical"
-        android:paddingHorizontal="@dimen/dimen24"
-        android:paddingTop="@dimen/dimen18"
-        android:paddingBottom="@dimen/dimen16"
+        android:paddingHorizontal="@dimen/dimen14"
+        android:paddingTop="@dimen/dimen8"
+        android:paddingBottom="@dimen/dimen14"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvStep2Label2">
@@ -71,10 +73,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/dimen8"
-            android:fontFamily="@font/roboto_medium"
+            android:fontFamily="@font/roboto_bold"
             android:text="@string/txt_beginer"
             android:textColor="@color/color_text_step"
-            android:textSize="@dimen/sp20"
+            android:textSize="@dimen/sp18"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tvStep2Label1" />
@@ -83,28 +85,27 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/dimen4"
-            android:fontFamily="@font/roboto_light"
+            android:fontFamily="@font/roboto_regular"
             android:text="@string/txt_step2_label_3"
             android:textColor="@color/color_content_step1"
             android:textSize="@dimen/sp14"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tvStep2Label1" />
-
-
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/layoutIntermedate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="@dimen/dimen63"
-        android:layout_marginTop="@dimen/dimen30"
+        android:layout_marginHorizontal="@dimen/dimen30"
+        android:layout_marginTop="@dimen/dimen20"
         android:background="@drawable/bg_card_step_2"
+        android:clickable="true"
         android:orientation="vertical"
-        android:paddingHorizontal="@dimen/dimen24"
-        android:paddingTop="@dimen/dimen18"
-        android:paddingBottom="@dimen/dimen16"
+        android:paddingHorizontal="@dimen/dimen14"
+        android:paddingTop="@dimen/dimen8"
+        android:paddingBottom="@dimen/dimen14"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/layoutBeginer">
@@ -113,10 +114,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/dimen8"
-            android:fontFamily="@font/roboto_medium"
+            android:fontFamily="@font/roboto_bold"
             android:text="@string/txt_intermediate"
             android:textColor="@color/color_text_step"
-            android:textSize="@dimen/sp20"
+            android:textSize="@dimen/sp18"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tvStep2Label1" />
@@ -125,15 +126,103 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/dimen4"
-            android:fontFamily="@font/roboto_light"
+            android:fontFamily="@font/roboto_regular"
             android:text="@string/txt_step2_label_5"
             android:textColor="@color/color_content_step1"
             android:textSize="@dimen/sp14"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tvStep2Label1" />
+    </LinearLayout>
 
+    <LinearLayout
+        android:id="@+id/layoutAdvanced"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dimen30"
+        android:layout_marginTop="@dimen/dimen20"
+        android:background="@drawable/bg_card_step_2"
+        android:clickable="true"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/dimen14"
+        android:paddingTop="@dimen/dimen8"
+        android:paddingBottom="@dimen/dimen14"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutIntermedate">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen8"
+            android:fontFamily="@font/roboto_bold"
+            android:text="@string/txt_step2_label_6"
+            android:textColor="@color/color_text_step"
+            android:textSize="@dimen/sp18"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvStep2Label1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen4"
+            android:fontFamily="@font/roboto_regular"
+            android:text="@string/txt_step2_label_7"
+            android:textColor="@color/color_content_step1"
+            android:textSize="@dimen/sp14"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvStep2Label1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutImNotSure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen24"
+        android:clickable="true"
+        android:orientation="vertical"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutAdvanced">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen8"
+            android:fontFamily="@font/roboto_regular"
+            android:text="@string/txt_step2_label_8"
+            android:textColor="@color/color_text_content_1"
+            android:textSize="@dimen/sp16"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvStep2Label1" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginHorizontal="@dimen/dimen14"
+            android:background="@color/color_text_content_1" />
 
     </LinearLayout>
+
+    <Button
+        android:id="@+id/btnContinue"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen42"
+        android:layout_marginHorizontal="@dimen/dimen46"
+        android:layout_marginBottom="@dimen/dimen62"
+        android:background="@drawable/bg_button_started"
+        android:fontFamily="@font/roboto_medium"
+        android:gravity="center"
+        android:text="@string/txt_continue"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp16"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

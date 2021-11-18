@@ -21,16 +21,23 @@
     <string name="txt_step2_label_6">Advanced</string>
     <string name="txt_step2_label_7" tools:ignore="StringEscaping">You’re fit and ready for an intensive workout plan</string>
     <string name="txt_step2_label_8">I’m not sure</string>
-    <string name="txt_step2_label_9"></string>
-
+    <string name="txt_step3_label_1">Personal Detail</string>
+    <string name="txt_step3_label_2">Let us know about you to speed up the\nresult, Get fit with your personal workout plan!</string>
 
     <string name="txt_beginer">Beginer</string>
-    <string name="txt_continue">CONTINUE</string>
+    <string name="txt_continue">Continue</string>
     <string name="txt_intermediate">Intermediate</string>
     <string name="menu_training">Training</string>
     <string name="menu_rountine">Rountine</string>
     <string name="menu_report">Report</string>
     <string name="menu_setting">Setting</string>
-
+    <string name="txt_cm_unit">cm/kg</string>
+    <string name="txt_ft_unit">ft/lbs</string>
+    <string name="txt_weight">Weight</string>
+    <string name="txt_height">Height</string>
+    <string name="txt_date_of_birth">Date of birth</string>
+    <string name="txt_gender">Gender</string>
+    <string name="txt_male">Male</string>
+    <string name="txt_female">Female</string>
 
 </resources>

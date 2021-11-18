@@ -21,4 +21,6 @@
     <color name="color_text_step">#7165E3</color>
     <color name="color_content_step1">#7278A0</color>
     <color name="color_wellcome_step1">#1B1C2E</color>
+    <color name="color_bg_gender">#DBDBDB</color>
+    <color name="color_stroke_properties">#DCDCDC</color>
 </resources>

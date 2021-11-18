@@ -1,7 +1,222 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:background="@color/white"
     android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen18"
+        android:layout_marginTop="@dimen/dimen30"
+        android:clickable="true"
+        android:src="@drawable/ic_back"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvStep3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen30"
+        android:fontFamily="@font/roboto_bold"
+        android:text="@string/txt_step_3_4"
+        android:textColor="@color/color_text_step"
+        android:textSize="@dimen/sp18"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvStep3Label1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen70"
+        android:fontFamily="@font/roboto_medium"
+        android:text="@string/txt_step3_label_1"
+        android:textColor="@color/color_wellcome_step1"
+        android:textSize="@dimen/sp20"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvStep3" />
+
+    <TextView
+        android:id="@+id/tvStep3Label2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen4"
+        android:fontFamily="@font/roboto_regular"
+        android:gravity="center"
+        android:text="@string/txt_step3_label_2"
+        android:textColor="@color/color_content_step1"
+        android:textSize="@dimen/sp16"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvStep3Label1" />
+
+    <LinearLayout
+        android:id="@+id/layoutUnitStep3"
+        android:layout_width="@dimen/dimen110"
+        android:layout_height="@dimen/dimen24"
+        android:layout_marginTop="@dimen/dimen40"
+        android:background="@drawable/bg_view_unit"
+        android:orientation="horizontal"
+        android:padding="@dimen/dimen1"
+        android:weightSum="2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvStep3Label2">
+
+        <TextView
+            android:id="@+id/tvUnitCm"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bg_view_unit_select"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center"
+            android:text="@string/txt_cm_unit"
+            android:textColor="@color/color_unit_select"
+            android:textSize="@dimen/sp14" />
+
+        <TextView
+            android:id="@+id/tvUnitFt"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bg_view_unit_select"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center"
+            android:text="@string/txt_ft_unit"
+            android:textColor="@color/color_unit_select"
+            android:textSize="@dimen/sp14" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvWeightStep3"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen40"
+        android:layout_marginHorizontal="@dimen/dimen40"
+        android:layout_marginTop="@dimen/dimen30"
+        android:background="@drawable/bg_propeties_step3"
+        android:drawableLeft="@drawable/ic_weight"
+        android:drawableRight="@drawable/ic_edit_right"
+        android:drawablePadding="@dimen/dimen12"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="@dimen/dimen14"
+        android:text="@string/txt_weight"
+        android:textColor="@color/color_wellcome_step1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutUnitStep3" />
+
+    <TextView
+        android:id="@+id/tvHeightStep3"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen40"
+        android:layout_marginHorizontal="@dimen/dimen40"
+        android:layout_marginTop="@dimen/dimen20"
+        android:background="@drawable/bg_propeties_step3"
+        android:drawableLeft="@drawable/ic_height"
+        android:drawableRight="@drawable/ic_edit_right"
+        android:drawablePadding="@dimen/dimen12"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="@dimen/dimen14"
+        android:text="@string/txt_height"
+        android:textColor="@color/color_wellcome_step1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvWeightStep3" />
+
+    <TextView
+        android:id="@+id/tvDateOfBirthStep3"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen40"
+        android:layout_marginHorizontal="@dimen/dimen40"
+        android:layout_marginTop="@dimen/dimen20"
+        android:background="@drawable/bg_propeties_step3"
+        android:drawableLeft="@drawable/ic_date_birth"
+        android:drawableRight="@drawable/ic_edit_right"
+        android:drawablePadding="@dimen/dimen12"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="@dimen/dimen14"
+        android:text="@string/txt_date_of_birth"
+        android:textColor="@color/color_wellcome_step1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvHeightStep3" />
+
+    <TextView
+        android:id="@+id/tvGenderTitleStep3"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dimen40"
+        android:layout_marginHorizontal="@dimen/dimen40"
+        android:layout_marginTop="@dimen/dimen20"
+        android:drawableLeft="@drawable/ic_gender"
+        android:drawablePadding="@dimen/dimen12"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="@dimen/dimen14"
+        android:text="@string/txt_gender"
+        android:textColor="@color/color_wellcome_step1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvDateOfBirthStep3" />
+
+    <LinearLayout
+        android:id="@+id/layoutGenderStep3"
+        android:layout_width="@dimen/dimen140"
+        android:layout_height="@dimen/dimen30"
+        android:layout_marginRight="@dimen/dimen40"
+        android:background="@drawable/bg_view_unit"
+        android:orientation="horizontal"
+        android:padding="@dimen/dimen2"
+        android:weightSum="2"
+        app:layout_constraintBottom_toBottomOf="@+id/tvGenderTitleStep3"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvGenderTitleStep3">
+
+        <TextView
+            android:id="@+id/tvMale"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bg_view_gender_select"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center"
+            android:text="@string/txt_male"
+            android:textColor="@color/color_unit_select"
+            android:textSize="@dimen/sp14" />
+
+        <TextView
+            android:id="@+id/tvFemale"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bg_view_gender_select"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center"
+            android:text="@string/txt_female"
+            android:textColor="@color/color_unit_select"
+            android:textSize="@dimen/sp14" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnContinueStep3"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen42"
+        android:layout_marginHorizontal="@dimen/dimen46"
+        android:layout_marginBottom="@dimen/dimen62"
+        android:background="@drawable/bg_button_started"
+        android:fontFamily="@font/roboto_medium"
+        android:gravity="center"
+        android:text="@string/txt_continue"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp16"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
