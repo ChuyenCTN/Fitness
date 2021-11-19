@@ -62,4 +62,7 @@ dependencies {
         exclude group: 'com.android.support', module: 'recyclerview-v7'
     }
 
+    implementation 'com.github.ome450901:SimpleRatingBar:1.5.1'
+    implementation 'com.yarolegovich:discrete-scrollview:1.5.1'
+
 }

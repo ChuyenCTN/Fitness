@@ -22,7 +22,7 @@ class SplashActivity : AppCompatActivity() {
             Runnable {
                 startActivity(Intent(this, StartActivity::class.java))
                 finish()
-            }, 1000
+            }, 200
         )
     }
 }

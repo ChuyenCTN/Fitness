@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dimen210">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imgContentItemSlideTraining"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/image_slide_1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/rounded_corner_item_1" />
+
+    <com.willy.ratingbar.ScaleRatingBar
+        android:id="@+id/ratingItemSlideTraining"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen20"
+        android:layout_marginTop="@dimen/dimen56"
+        android:layout_marginRight="@dimen/dimen10"
+        app:layout_constraintBottom_toBottomOf="@+id/tvContentSlideTraining"
+        app:layout_constraintRight_toRightOf="@+id/imgContentItemSlideTraining"
+        app:srb_clearRatingEnabled="true"
+        app:srb_clickable="true"
+        app:srb_drawableEmpty="@drawable/ic_light_empty"
+        app:srb_drawableFilled="@drawable/ic_light_fill"
+        app:srb_isIndicator="false"
+        app:srb_minimumStars="1"
+        app:srb_numStars="3"
+        app:srb_scrollable="true"
+        app:srb_starPadding="@dimen/dimen3"
+        app:srb_stepSize="1"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tvTitleSlideTraining"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen16"
+        android:ellipsize="end"
+        android:fontFamily="@font/roboto_medium"
+        android:maxLines="1"
+        android:text="txt_title_training"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp20"
+        app:layout_constraintLeft_toLeftOf="@+id/imgContentItemSlideTraining"
+        app:layout_constraintTop_toTopOf="@+id/imgContentItemSlideTraining" />
+
+    <TextView
+        android:id="@+id/tvContentSlideTraining"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen16"
+        android:ellipsize="end"
+        android:fontFamily="@font/roboto_medium"
+        android:maxLines="1"
+        android:text="txt_title_training"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp17"
+        app:layout_constraintBottom_toTopOf="@+id/tvTimeSlideTraining"
+        app:layout_constraintLeft_toLeftOf="@+id/imgContentItemSlideTraining" />
+
+    <TextView
+        android:id="@+id/tvTimeSlideTraining"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen16"
+        android:layout_marginBottom="@dimen/dimen10"
+        android:ellipsize="end"
+        android:fontFamily="@font/roboto_light"
+        android:maxLines="1"
+        android:text="txt_title_training"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp13"
+        app:layout_constraintBottom_toBottomOf="@+id/imgContentItemSlideTraining"
+        app:layout_constraintLeft_toLeftOf="@+id/imgContentItemSlideTraining" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
     android:paddingHorizontal="@dimen/dimen16">
 
     <TextView
@@ -24,12 +24,11 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="@+id/tvTitleTraining" />
 
-    <View
+    <com.yarolegovich.discretescrollview.DiscreteScrollView
         android:id="@+id/slideTraining"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/dimen200"
+        android:layout_height="@dimen/dimen210"
         android:layout_marginTop="@dimen/dimen20"
-        android:background="@color/color_wellcome_step1"
         app:layout_constraintTop_toBottomOf="@+id/tvTitleTraining" />
 
     <TextView
@@ -50,7 +49,7 @@
         android:layout_height="0dp"
         android:layout_marginTop="@dimen/dimen18"
         app:layout_constraintBottom_toBottomOf="parent"
-        tools:listitem="@layout/item_list_training"
-        app:layout_constraintTop_toBottomOf="@+id/tvPercentTraining" />
+        app:layout_constraintTop_toBottomOf="@+id/tvPercentTraining"
+        tools:listitem="@layout/item_list_training" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

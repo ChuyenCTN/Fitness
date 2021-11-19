@@ -32,7 +32,7 @@ class StartActivity : AppCompatActivity() {
             Runnable {
                 startActivity(Intent(this, MainActivity::class.java))
                 finish()
-            }, 5000
+            }, 200
         )
     }
 
