@@ -14,6 +14,14 @@ class TrainingSlideAdapter : RecyclerView.Adapter<TrainingSlideAdapter.ViewHolde
 
     var responseList: ArrayList<ItemSlideTraining> = ArrayList()
 
+    lateinit var itemClick: itemClickListener
+
+
+    @JvmName("setItemClick1")
+    fun setItemClick(itemClickListener: itemClickListener) {
+        this.itemClick = itemClickListener
+    }
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         return ViewHolder(
             LayoutInflater.from(parent.context)
@@ -22,7 +30,7 @@ class TrainingSlideAdapter : RecyclerView.Adapter<TrainingSlideAdapter.ViewHolde
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.fillData(responseList[position])
+        holder.fillData(itemClick, responseList[position])
     }
 
     override fun getItemCount(): Int {
@@ -33,20 +41,23 @@ class TrainingSlideAdapter : RecyclerView.Adapter<TrainingSlideAdapter.ViewHolde
 
         private val imgContentItemSlideTraining: ShapeableImageView by lazy {
             itemView.findViewById<ShapeableImageView>(
-                R.id.imgContentItemSlideTraining
+                R.id.imgContentBegin
             )
         }
         private val ratingItemSlideTraining: ScaleRatingBar by lazy {
             itemView.findViewById<ScaleRatingBar>(
-                R.id.ratingItemSlideTraining
+                R.id.ratingBegin
             )
         }
-        private val tvTitleSlideTraining: TextView by lazy { itemView.findViewById<TextView>(R.id.tvTitleSlideTraining) }
-        private val tvContentSlideTraining: TextView by lazy { itemView.findViewById<TextView>(R.id.tvContentSlideTraining) }
-        private val tvTimeSlideTraining: TextView by lazy { itemView.findViewById<TextView>(R.id.tvTimeSlideTraining) }
+        private val tvTitleSlideTraining: TextView by lazy { itemView.findViewById<TextView>(R.id.tvTitleBegin) }
+        private val tvContentSlideTraining: TextView by lazy { itemView.findViewById<TextView>(R.id.tvContentBegin) }
+        private val tvTimeSlideTraining: TextView by lazy { itemView.findViewById<TextView>(R.id.tvTimeBegin) }
 
-        fun fillData(itemData: ItemSlideTraining) {
+        fun fillData(itemClickListener: itemClickListener, itemData: ItemSlideTraining) {
             itemData.let { data ->
+                itemView.setOnClickListener {
+                    itemClickListener.onClick(data)
+                }
                 tvTitleSlideTraining.text = if (data.title1 != null) data.title1 else ""
                 imgContentItemSlideTraining.setImageResource(data.image)
                 tvContentSlideTraining.text = if (data.title2 != null) data.title2 else ""
@@ -65,5 +76,9 @@ class TrainingSlideAdapter : RecyclerView.Adapter<TrainingSlideAdapter.ViewHolde
     fun clearData() {
         this.responseList.clear()
         notifyDataSetChanged()
+    }
+
+    interface itemClickListener {
+        fun onClick(item: ItemSlideTraining)
     }
 }

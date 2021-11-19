@@ -3,18 +3,18 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="@dimen/dimen210">
+    android:layout_height="match_parent"
+    android:background="@color/color_bg_app"
+    tools:context=".feature.BeginActivity">
 
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/imgContentBegin"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="@dimen/dimen200"
         android:scaleType="centerCrop"
         android:src="@drawable/image_slide_1"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:shapeAppearanceOverlay="@style/rounded_corner_item_1" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <com.willy.ratingbar.ScaleRatingBar
         android:id="@+id/ratingBegin"
@@ -79,5 +79,21 @@
         android:textSize="@dimen/sp13"
         app:layout_constraintBottom_toBottomOf="@+id/imgContentBegin"
         app:layout_constraintLeft_toLeftOf="@+id/imgContentBegin" />
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshBegin"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="@dimen/dimen16"
+        android:layout_marginTop="@dimen/dimen16"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgContentBegin">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcvBegin"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

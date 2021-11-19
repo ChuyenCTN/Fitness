@@ -1,5 +1,6 @@
 package com.fitness.feature
 
+import android.content.Intent
 import android.os.Build
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -78,7 +79,12 @@ class TrainingFragment : Fragment() {
                 .build()
         )
 
+        adapterSlide.setItemClick(object : TrainingSlideAdapter.itemClickListener {
+            override fun onClick(item: ItemSlideTraining) {
+                startActivity(Intent(requireContext(), BeginActivity::class.java))
+            }
 
+        })
 
     }
 }

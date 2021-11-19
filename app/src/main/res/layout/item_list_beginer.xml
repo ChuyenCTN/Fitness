@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/dimen16"
+    android:background="@drawable/bg_item_list_training"
+    android:padding="@dimen/dimen14">
+
+    <com.willy.ratingbar.ScaleRatingBar
+        android:id="@+id/ratingItemBeginer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srb_clearRatingEnabled="true"
+        app:srb_clickable="true"
+        app:srb_drawableEmpty="@drawable/ic_item_begin_empty"
+        app:srb_drawableFilled="@drawable/ic_item_begin_filled"
+        app:srb_isIndicator="false"
+        app:srb_minimumStars="1"
+        app:srb_numStars="3"
+        app:srb_scrollable="true"
+        app:srb_starPadding="@dimen/dimen3"
+        app:srb_stepSize="1"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tvTitleItemBegin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ratingItemBeginer"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="@dimen/dimen16"
+        android:layout_marginRight="@dimen/dimen16"
+        android:layout_toLeftOf="@+id/imgContentItemBeginer"
+        android:ellipsize="end"
+        android:fontFamily="@font/roboto_regular"
+        android:gravity="left"
+        android:maxLines="1"
+        android:text="Day 1"
+        android:textAllCaps="true"
+        android:textColor="@color/color_wellcome_step1"
+        android:textSize="@dimen/sp16" />
+
+    <TextView
+        android:id="@+id/tvDayItemBegin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvTitleItemBegin"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="@dimen/dimen1"
+        android:layout_marginRight="@dimen/dimen16"
+        android:layout_toLeftOf="@+id/imgContentItemBeginer"
+        android:ellipsize="end"
+        android:fontFamily="@font/roboto_regular"
+        android:gravity="left"
+        android:maxLines="1"
+        android:text="Day 1"
+        android:textAllCaps="true"
+        android:textColor="@color/color_text_step"
+        android:textSize="@dimen/sp16" />
+
+    <ImageView
+        android:id="@+id/imgContentItemBeginer"
+        android:layout_width="@dimen/dimen160"
+        android:layout_height="@dimen/dimen50"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/image_item_beginer" />
+
+
+</RelativeLayout>
