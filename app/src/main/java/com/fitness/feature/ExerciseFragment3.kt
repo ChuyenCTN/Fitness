@@ -28,7 +28,11 @@ class ExerciseFragment3(val changePagerListener: ChangePagerListener) : Fragment
     @RequiresApi(Build.VERSION_CODES.N)
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+        tvSkipExercise3.setOnClickListener {
+            changePagerListener.let {
+                it.onNext()
+            }
+        }
         btnBackExercise3.setOnClickListener {
             DialogUtils.showExerciseDialog(
                 requireContext(),

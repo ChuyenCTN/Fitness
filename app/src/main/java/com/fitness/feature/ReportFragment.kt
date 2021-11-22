@@ -40,7 +40,8 @@ class ReportFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         if (calendarAdapter == null)
             calendarAdapter = CalendarReportAdapter()
-        val layoutManager = SpanningLinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+//        val layoutManager = SpanningLinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+        val layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
         rcvCalendarReport.layoutManager = layoutManager
         rcvCalendarReport.adapter = calendarAdapter
 
@@ -49,32 +50,27 @@ class ReportFragment : Fragment() {
     }
 
     fun initListCalendar() {
-        val SDF2 = SimpleDateFormat("dd/MM/yyyy")
         val SDF1 = SimpleDateFormat("E dd/MM/yyyy")
-        val SDF = SimpleDateFormat("yyyy-MM-dd")
         val DAYFORMAT = SimpleDateFormat("dd")
         val EFORMAT = SimpleDateFormat("E")
         val CURRENTDATE2: String =
-            SDF2.format(Calendar.getInstance().time)
+            SDF1.format(Calendar.getInstance().time)
         val ItemCalendarReports: MutableList<ItemCalendarReport> = ArrayList<ItemCalendarReport>()
-        val days: Array<String> = DateCommons.getDaysCurrentWeek(SDF1)
+        val days: Array<String> = DateCommons.get60Days(false, SDF1)
         try {
             for (i in days.indices) {
                 ItemCalendarReports.add(
                     ItemCalendarReport(
-                        days[i], SDF2.format(SDF1.parse(days[i])), SDF.format(
-                            SDF1.parse(
-                                days[i]
-                            )
-                        ), DAYFORMAT.format(SDF1.parse(days[i])), EFORMAT.format(
+                        days[i], DAYFORMAT.format(SDF1.parse(days[i])), EFORMAT.format(
                             SDF1.parse(
                                 days[i]
                             )
                         ).replace("Th ", "T")
                     )
                 )
-                if (ItemCalendarReports[i].time2.equals(CURRENTDATE2)) {
+                if (ItemCalendarReports[i].time3.equals(CURRENTDATE2)) {
                     ItemCalendarReports[i].isSelect = true
+                    rcvCalendarReport.smoothScrollToPosition(i+3)
                 }
             }
         } catch (e: ParseException) {
@@ -82,7 +78,7 @@ class ReportFragment : Fragment() {
         }
         calendarAdapter.setData(ItemCalendarReports as ArrayList<ItemCalendarReport>)
 
-        calendarAdapter.setItemClick(object :CalendarReportAdapter.itemClickListener{
+        calendarAdapter.setItemClick(object : CalendarReportAdapter.itemClickListener {
             override fun onClick(itemData: ItemCalendarReport) {
 
             }

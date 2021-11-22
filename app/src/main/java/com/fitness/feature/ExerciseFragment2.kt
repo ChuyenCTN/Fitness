@@ -70,7 +70,7 @@ class ExerciseFragment2(val changePagerListener: ChangePagerListener) : Fragment
         btnPreviousExercise2.setOnClickListener {
             changePagerListener.onPrevious()
         }
-        fakeData()
+//        fakeData()
     }
 
     fun fakeData() {

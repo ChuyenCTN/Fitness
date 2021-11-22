@@ -11,6 +11,7 @@ import android.view.ViewGroup
 import androidx.annotation.RequiresApi
 import androidx.fragment.app.Fragment
 import com.fitness.R
+import kotlinx.android.synthetic.main.fragment_exercise_3.*
 import kotlinx.android.synthetic.main.fragment_step_1.*
 
 class ExerciseFragment4 : Fragment() {
@@ -26,7 +27,11 @@ class ExerciseFragment4 : Fragment() {
     @RequiresApi(Build.VERSION_CODES.N)
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        fakeData()
+//        fakeData()
+
+        tvSkipExercise3.setOnClickListener {
+            startActivity(Intent(requireContext(), CompleteActivity::class.java))
+        }
 
     }
 
@@ -36,10 +41,10 @@ class ExerciseFragment4 : Fragment() {
         var progress = 0
 
 
-        Handler().postDelayed(Runnable {
-            requireContext().let {
-                startActivity(Intent(it, CompleteActivity::class.java))
-            }
-        }, 15000)
+//        Handler().postDelayed(Runnable {
+//            requireContext().let {
+//                startActivity(Intent(it, CompleteActivity::class.java))
+//            }
+//        }, 15000)
     }
 }

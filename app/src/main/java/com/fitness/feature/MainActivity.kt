@@ -7,7 +7,11 @@ import android.view.WindowManager
 import androidx.viewpager.widget.ViewPager
 import com.fitness.R
 import com.fitness.adapter.ViewPagerAdapter
+import com.fitness.model.PostMessage
 import kotlinx.android.synthetic.main.activity_main.*
+import org.greenrobot.eventbus.EventBus
+import org.greenrobot.eventbus.Subscribe
+import org.greenrobot.eventbus.ThreadMode
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -48,6 +52,10 @@ class MainActivity : AppCompatActivity() {
             }
         })
         setupViewPager(vpContainer)
+
+        val intent = intent
+        var position = intent.getIntExtra("ScrollTo", 0)
+        vpContainer.setCurrentItem(position)
 
     }
 

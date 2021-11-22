@@ -2,7 +2,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="@dimen/dimen56"
     android:layout_height="wrap_content"
-    android:background="@android:color/transparent">
+    android:background="@android:color/transparent"
+    android:gravity="center_horizontal">
 
     <LinearLayout
         android:id="@+id/layoutCalendarNormal"
@@ -11,8 +12,8 @@
         android:layout_marginTop="@dimen/dimen4"
         android:gravity="center"
         android:orientation="vertical"
-        android:paddingVertical="@dimen/dimen9"
         android:paddingHorizontal="@dimen/dimen6"
+        android:paddingVertical="@dimen/dimen9"
         android:visibility="gone">
 
         <TextView
@@ -44,8 +45,8 @@
         android:background="@drawable/bg_item_select_report"
         android:gravity="center"
         android:orientation="vertical"
-        android:paddingVertical="@dimen/dimen9"
-        android:paddingHorizontal="@dimen/dimen6">
+        android:paddingHorizontal="@dimen/dimen8"
+        android:paddingVertical="@dimen/dimen12">
 
         <TextView
             android:id="@+id/tvThItemCalendarSelect"
@@ -61,10 +62,12 @@
             android:id="@+id/tvDayItemCalendarSelect"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dimen6"
-            android:background="@drawable/ic_ellipse"
+            android:layout_marginTop="@dimen/dimen8"
+            android:background="@drawable/bg_day_select"
             android:fontFamily="@font/roboto_medium"
             android:gravity="center"
+            android:paddingHorizontal="@dimen/dimen8"
+            android:paddingVertical="@dimen/dimen6"
             android:text="27"
             android:textColor="@color/color_text_item_calendar_select"
             android:textSize="@dimen/sp13" />

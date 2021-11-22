@@ -9,10 +9,19 @@ import com.fitness.R
 import com.fitness.model.ItemSlideTraining
 import com.google.android.material.imageview.ShapeableImageView
 import com.willy.ratingbar.ScaleRatingBar
+import android.app.Activity
+import android.content.Context
+
+import android.util.DisplayMetrics
+
 
 class TrainingSlideAdapter : RecyclerView.Adapter<TrainingSlideAdapter.ViewHolder>() {
 
     var responseList: ArrayList<ItemSlideTraining> = ArrayList()
+
+    var context: Context? = null
+
+    var width: Int = 0
 
     lateinit var itemClick: itemClickListener
 
@@ -22,6 +31,7 @@ class TrainingSlideAdapter : RecyclerView.Adapter<TrainingSlideAdapter.ViewHolde
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+        context = parent.context
         return ViewHolder(
             LayoutInflater.from(parent.context)
                 .inflate(R.layout.item_slide_training, parent, false)
@@ -29,7 +39,7 @@ class TrainingSlideAdapter : RecyclerView.Adapter<TrainingSlideAdapter.ViewHolde
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.fillData(itemClick, responseList[position])
+        holder.fillData(width,itemClick, responseList[position])
     }
 
     override fun getItemCount(): Int {
@@ -52,8 +62,13 @@ class TrainingSlideAdapter : RecyclerView.Adapter<TrainingSlideAdapter.ViewHolde
         private val tvContentSlideTraining: TextView by lazy { itemView.findViewById<TextView>(R.id.tvContentBegin) }
         private val tvTimeSlideTraining: TextView by lazy { itemView.findViewById<TextView>(R.id.tvTimeBegin) }
 
-        fun fillData(itemClickListener: itemClickListener, itemData: ItemSlideTraining) {
+        fun fillData(
+            width: Int,
+            itemClickListener: itemClickListener,
+            itemData: ItemSlideTraining
+        ) {
             itemData.let { data ->
+                itemView.layoutParams.width = width
                 itemView.setOnClickListener {
                     itemClickListener.onClick(data)
                 }
@@ -62,6 +77,8 @@ class TrainingSlideAdapter : RecyclerView.Adapter<TrainingSlideAdapter.ViewHolde
                 tvContentSlideTraining.text = if (data.title2 != null) data.title2 else ""
                 tvTimeSlideTraining.text = if (data.time != null) data.time else ""
                 ratingItemSlideTraining.rating = data.progress.toFloat()
+
+
             }
         }
     }

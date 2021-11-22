@@ -4,11 +4,18 @@ import static java.util.Calendar.getInstance;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.os.Build;
+import android.util.Log;
+
+import androidx.annotation.RequiresApi;
 
 import com.fitness.R;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.DayOfWeek;
+import java.time.LocalDate;
+import java.time.temporal.TemporalAdjusters;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
@@ -213,19 +220,18 @@ public class DateCommons {
         return days;
     }
 
-    public static String[] get7Days(boolean type, SimpleDateFormat dateFormat, String day) {
-        String[] days = new String[7];
+    public static String[] get60Days(boolean type, SimpleDateFormat dateFormat) {
+        String[] days = new String[60];
         Calendar calendar = Calendar.getInstance();
-        calendar.setTime(getDateFromString(dateFormat, day));
+        calendar.setTime(getDateFromString(dateFormat, dateFormat.format(Calendar.getInstance().getTime())));
         if (type) {
             calendar.add(Calendar.DAY_OF_YEAR, 0);
         } else {
-            calendar.add(Calendar.DAY_OF_YEAR, -8);
+            calendar.add(Calendar.DAY_OF_YEAR, -31);
         }
-        for (int i = 0; i < 7; i++) {
+        for (int i = 0; i < 60; i++) {
             calendar.add(Calendar.DAY_OF_YEAR, 1);
             days[i] = (dateFormat.format(calendar.getTime()));
-//            Log.d("zxcvbnm,.", days[i]);
         }
         return days;
     }
@@ -247,6 +253,24 @@ public class DateCommons {
 
     public static String getCurrentDate(SimpleDateFormat dateFormat) {
         return dateFormat.format(Calendar.getInstance().getTime());
+    }
+
+    @RequiresApi(api = Build.VERSION_CODES.O)
+    public static void getDayOfMonth() {
+        LocalDate today = LocalDate.now();
+        LocalDate firstDayOfTheMonth = today.with(TemporalAdjusters.firstDayOfMonth());
+        LocalDate lastDayOfTheMonth = today.with(TemporalAdjusters.lastDayOfMonth());
+        LocalDate squareCalendarMonthDayStart = firstDayOfTheMonth
+                .with(TemporalAdjusters.previousOrSame(DayOfWeek.SUNDAY));
+        LocalDate squareCalendarMonthDayEnd = lastDayOfTheMonth
+                .with(TemporalAdjusters.nextOrSame(DayOfWeek.SATURDAY));
+        List<LocalDate> totalDates = new ArrayList<>();
+        while (!squareCalendarMonthDayStart.isAfter(squareCalendarMonthDayEnd)) {
+            totalDates.add(squareCalendarMonthDayStart);
+            squareCalendarMonthDayStart = squareCalendarMonthDayStart.plusDays(1);
+        }
+
+        totalDates.forEach(System.out::println);
     }
 
 }

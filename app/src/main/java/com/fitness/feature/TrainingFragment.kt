@@ -3,6 +3,7 @@ package com.fitness.feature
 import android.content.Intent
 import android.os.Build
 import android.os.Bundle
+import android.util.DisplayMetrics
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -53,6 +54,11 @@ class TrainingFragment : Fragment() {
     }
 
     fun fakeData() {
+        val displayMetrics = DisplayMetrics()
+        requireActivity().windowManager.defaultDisplay.getMetrics(displayMetrics)
+        val height = displayMetrics.heightPixels
+        val width = displayMetrics.widthPixels
+
         var responseList: ArrayList<ItemTraining> = ArrayList()
         for (i in 1..10) {
             responseList.add(ItemTraining("Day ${i}", "${i + 2} min . ${i} workout", i))
@@ -90,15 +96,15 @@ class TrainingFragment : Fragment() {
 
         if (adapterSlide == null)
             adapterSlide = TrainingSlideAdapter()
+        adapterSlide.width = width * 85 / 100
         adapterSlide.setData(slideData)
         infiniteAdapter = InfiniteScrollAdapter.wrap(adapterSlide)
         slideTraining.setOrientation(DSVOrientation.HORIZONTAL)
         slideTraining.adapter = adapterSlide
-
         slideTraining.setItemTransformer(
             ScaleTransformer.Builder()
-                .setMinScale(0.5f)
-                .setMaxScale(1f)
+                .setMinScale(0.92f)
+                .setMaxScale(0.99f)
                 .setPivotX(Pivot.X.LEFT)
                 .build()
         )

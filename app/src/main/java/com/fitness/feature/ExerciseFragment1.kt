@@ -30,7 +30,7 @@ class ExerciseFragment1(val changePagerListener: ChangePagerListener) : Fragment
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        fakeData()
+//        fakeData()
 
         imgBackExercise1.setOnClickListener {
             DialogUtils.showExerciseDialog(

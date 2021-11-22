@@ -29,7 +29,7 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rcvCalendarReport"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/dimen80"
             android:layout_marginHorizontal="@dimen/dimen10"
             android:layout_marginTop="@dimen/dimen16" />
 
@@ -37,7 +37,7 @@
             android:id="@+id/tvRecordsReport"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dimen20"
+            android:layout_marginTop="@dimen/dimen8"
             android:drawableRight="@drawable/ic_arrow_right_records"
             android:drawablePadding="@dimen/dimen2"
             android:fontFamily="@font/roboto_regular"

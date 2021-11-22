@@ -40,6 +40,10 @@ class BeginActivity : AppCompatActivity() {
             startActivity(Intent(this, ExerciseStartActivity::class.java))
         }
 
+        btnBackBegin.setOnClickListener {
+            onBackPressed()
+        }
+
     }
 
     fun setUpRCV() {
