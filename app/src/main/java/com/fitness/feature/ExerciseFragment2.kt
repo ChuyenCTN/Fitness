@@ -70,6 +70,10 @@ class ExerciseFragment2(val changePagerListener: ChangePagerListener) : Fragment
         btnPreviousExercise2.setOnClickListener {
             changePagerListener.onPrevious()
         }
+
+        btnStateExercise2.setOnClickListener {
+            startActivity(Intent(requireContext(), PauseActivity::class.java))
+        }
 //        fakeData()
     }
 

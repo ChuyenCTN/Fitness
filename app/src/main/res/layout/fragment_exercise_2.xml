@@ -9,9 +9,10 @@
         android:id="@+id/imgBackExercise2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/dimen18"
-        android:layout_marginTop="@dimen/dimen30"
+        android:layout_marginLeft="@dimen/dimen10"
+        android:layout_marginTop="@dimen/dimen22"
         android:clickable="true"
+        android:padding="@dimen/dimen10"
         android:src="@drawable/ic_back"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -130,6 +131,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
+                android:padding="@dimen/dimen10"
                 android:src="@drawable/ic_back" />
         </RelativeLayout>
 
@@ -144,6 +146,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
+                android:padding="@dimen/dimen10"
                 android:rotation="180"
                 android:src="@drawable/ic_back" />
         </RelativeLayout>

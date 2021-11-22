@@ -33,6 +33,32 @@ class ExerciseFragment4 : Fragment() {
             startActivity(Intent(requireContext(), CompleteActivity::class.java))
         }
 
+        btnBackExercise3.setOnClickListener {
+            DialogUtils.showExerciseDialog(
+                requireContext(),
+                object : DialogUtils.exerciseDialogListener {
+                    override fun onItem1() {
+                    }
+
+                    override fun onItem2() {
+
+                    }
+
+                    override fun onItem3() {
+
+                    }
+
+                    override fun onDismiss() {
+
+                    }
+
+                    override fun onQuit() {
+//                        requireActivity().onBackPressed()
+                        requireActivity().finish()
+                    }
+                })
+        }
+
     }
 
     fun fakeData() {

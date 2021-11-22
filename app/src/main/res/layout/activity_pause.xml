@@ -11,9 +11,10 @@
         android:id="@+id/btnBackPause"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/dimen18"
-        android:layout_marginTop="@dimen/dimen30"
+        android:layout_marginLeft="@dimen/dimen10"
+        android:layout_marginTop="@dimen/dimen22"
         android:clickable="true"
+        android:padding="@dimen/dimen8"
         android:src="@drawable/ic_arrow_left_white"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -42,15 +43,15 @@
 
         <ImageView
             android:id="@+id/imgContentPause"
-            android:padding="@dimen/dimen46"
-            android:background="@color/white"
             android:layout_width="match_parent"
-            android:src="@drawable/img_detail_beginer"
             android:layout_height="@dimen/dimen260"
             android:layout_marginTop="@dimen/dimen20"
+            android:background="@color/white"
+            android:padding="@dimen/dimen46"
+            android:src="@drawable/img_detail_beginer"
             android:visibility="visible" />
 
-        <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+        <WebView
             android:id="@+id/videoPlayPause"
             android:layout_width="match_parent"
             android:layout_height="@dimen/dimen260"
