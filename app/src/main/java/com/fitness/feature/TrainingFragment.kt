@@ -60,9 +60,33 @@ class TrainingFragment : Fragment() {
         adapter.setData(responseList)
 
         var slideData: ArrayList<ItemSlideTraining> = ArrayList()
-        slideData.add(ItemSlideTraining(title1 = "Fitness Workout",title2 = "Fitness Workout",time = "30 days left",image = R.drawable.image_slide_1,1))
-        slideData.add(ItemSlideTraining(title1 = "Beginer",title2 = "Beginer",time = "30 days left",image = R.drawable.image_slide_2,3))
-        slideData.add(ItemSlideTraining(title1 = "Fitness Workout",title2 = "Fitness Workout",time = "30 days left",image = R.drawable.image_slide_3,2))
+        slideData.add(
+            ItemSlideTraining(
+                title1 = "Fitness Workout",
+                title2 = "Fitness Workout",
+                time = "30 days left",
+                image = R.drawable.image_slide_1,
+                1
+            )
+        )
+        slideData.add(
+            ItemSlideTraining(
+                title1 = "Beginer",
+                title2 = "Beginer",
+                time = "30 days left",
+                image = R.drawable.image_slide_2,
+                3
+            )
+        )
+        slideData.add(
+            ItemSlideTraining(
+                title1 = "Fitness Workout",
+                title2 = "Fitness Workout",
+                time = "30 days left",
+                image = R.drawable.image_slide_3,
+                2
+            )
+        )
 
         if (adapterSlide == null)
             adapterSlide = TrainingSlideAdapter()
@@ -81,6 +105,12 @@ class TrainingFragment : Fragment() {
 
         adapterSlide.setItemClick(object : TrainingSlideAdapter.itemClickListener {
             override fun onClick(item: ItemSlideTraining) {
+                startActivity(Intent(requireContext(), BeginActivity::class.java))
+            }
+        })
+
+        adapter.setItemClick(object : TraingListAdapter.itemClickListener {
+            override fun onClick(item: ItemTraining) {
                 startActivity(Intent(requireContext(), BeginActivity::class.java))
             }
 

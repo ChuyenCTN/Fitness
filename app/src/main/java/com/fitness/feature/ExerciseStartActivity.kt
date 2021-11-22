@@ -59,7 +59,6 @@ class ExerciseStartActivity : AppCompatActivity(), ChangePagerListener {
         listIndicator[0].isSelect = true
         adapterIndicator.setData(listIndicator)
 
-
         viewPager.setOnPageChangeListener(object : OnPageChangeListener {
             override fun onPageSelected(position: Int) {
 //                if (position==0)

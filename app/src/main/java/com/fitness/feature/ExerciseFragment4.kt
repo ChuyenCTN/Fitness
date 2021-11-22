@@ -37,8 +37,9 @@ class ExerciseFragment4 : Fragment() {
 
 
         Handler().postDelayed(Runnable {
-            startActivity(Intent(requireContext(), CompleteActivity::class.java))
+            requireContext().let {
+                startActivity(Intent(it, CompleteActivity::class.java))
+            }
         }, 15000)
-
     }
 }

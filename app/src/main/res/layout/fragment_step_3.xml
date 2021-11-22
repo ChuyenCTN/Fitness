@@ -4,29 +4,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/dimen18"
-        android:layout_marginTop="@dimen/dimen30"
-        android:clickable="true"
-        android:src="@drawable/ic_back"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/tvStep3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dimen30"
-        android:fontFamily="@font/roboto_bold"
-        android:text="@string/txt_step_3_4"
-        android:textColor="@color/color_text_step"
-        android:textSize="@dimen/sp18"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <TextView
         android:id="@+id/tvStep3Label1"
         android:layout_width="wrap_content"
@@ -38,7 +15,7 @@
         android:textSize="@dimen/sp20"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvStep3" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tvStep3Label2"
@@ -93,7 +70,7 @@
 
     </LinearLayout>
 
-    <TextView
+    <EditText
         android:id="@+id/tvWeightStep3"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dimen40"
@@ -104,14 +81,18 @@
         android:drawableRight="@drawable/ic_edit_right"
         android:drawablePadding="@dimen/dimen12"
         android:gravity="center_vertical"
+        android:hint="@string/txt_weight"
+        android:imeOptions="actionNext"
+        android:inputType="number"
         android:paddingHorizontal="@dimen/dimen14"
-        android:text="@string/txt_weight"
         android:textColor="@color/color_wellcome_step1"
+        android:textColorHint="@color/color_wellcome_step1"
+        android:textSize="@dimen/sp15"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/layoutUnitStep3" />
 
-    <TextView
+    <EditText
         android:id="@+id/tvHeightStep3"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dimen40"
@@ -122,14 +103,18 @@
         android:drawableRight="@drawable/ic_edit_right"
         android:drawablePadding="@dimen/dimen12"
         android:gravity="center_vertical"
+        android:hint="@string/txt_height"
+        android:imeOptions="actionNext"
+        android:inputType="number"
         android:paddingHorizontal="@dimen/dimen14"
-        android:text="@string/txt_height"
         android:textColor="@color/color_wellcome_step1"
+        android:textColorHint="@color/color_wellcome_step1"
+        android:textSize="@dimen/sp15"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvWeightStep3" />
 
-    <TextView
+    <EditText
         android:id="@+id/tvDateOfBirthStep3"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dimen40"
@@ -140,9 +125,13 @@
         android:drawableRight="@drawable/ic_edit_right"
         android:drawablePadding="@dimen/dimen12"
         android:gravity="center_vertical"
+        android:hint="@string/txt_date_of_birth"
+        android:imeOptions="actionDone"
+        android:inputType="number"
         android:paddingHorizontal="@dimen/dimen14"
-        android:text="@string/txt_date_of_birth"
         android:textColor="@color/color_wellcome_step1"
+        android:textColorHint="@color/color_wellcome_step1"
+        android:textSize="@dimen/sp15"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvHeightStep3" />

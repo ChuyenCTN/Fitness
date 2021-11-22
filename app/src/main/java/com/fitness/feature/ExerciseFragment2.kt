@@ -32,7 +32,7 @@ class ExerciseFragment2(val changePagerListener: ChangePagerListener) : Fragment
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        btnStateExercise2.setOnClickListener {
+        imgBackExercise2.setOnClickListener {
             DialogUtils.showExerciseDialog(
                 requireContext(),
                 object : DialogUtils.exerciseDialogListener {
@@ -52,10 +52,16 @@ class ExerciseFragment2(val changePagerListener: ChangePagerListener) : Fragment
                     }
 
                     override fun onQuit() {
-                        startActivity(Intent(requireContext(), PauseActivity::class.java))
+//                        requireActivity().onBackPressed()
+                        requireActivity().finish()
                     }
                 })
         }
+
+        btnMovieExercise2.setOnClickListener {
+            startActivity(Intent(requireContext(), PauseActivity::class.java))
+        }
+
 
         btnNextExercise2.setOnClickListener {
             changePagerListener.onNext()

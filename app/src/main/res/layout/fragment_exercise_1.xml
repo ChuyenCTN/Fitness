@@ -113,6 +113,21 @@
             app:cpb_progressbar_color="@color/color_progress_selected"
             app:cpb_progressbar_width="@dimen/dimen8"
             app:cpb_round_border="true" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/progressCountDownExercise1">
+
+            <ImageView
+                android:id="@+id/btnNextExercise1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:rotation="180"
+                android:src="@drawable/ic_back" />
+        </RelativeLayout>
     </RelativeLayout>
 
     <RelativeLayout

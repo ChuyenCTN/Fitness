@@ -7,10 +7,33 @@
     android:background="@color/color_bg_app"
     tools:context=".feature.StartActivity">
 
+    <ImageView
+        android:id="@+id/btnBackStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="@dimen/dimen18"
+        android:layout_marginTop="@dimen/dimen30"
+        android:clickable="true"
+        android:src="@drawable/ic_back"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tvStepStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dimen30"
+        android:fontFamily="@font/roboto_bold"
+        android:text="@string/txt_step_1_4"
+        android:textColor="@color/color_text_step"
+        android:textSize="@dimen/sp18" />
+
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/vpStart"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tvStepStart" />
 
     <com.zhpan.indicator.IndicatorView
         android:id="@+id/indicatorView"

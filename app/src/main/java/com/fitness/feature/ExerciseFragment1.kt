@@ -1,5 +1,6 @@
 package com.fitness.feature
 
+import android.content.Intent
 import android.os.Build
 import android.os.Bundle
 import android.text.Html
@@ -31,6 +32,40 @@ class ExerciseFragment1(val changePagerListener: ChangePagerListener) : Fragment
 
         fakeData()
 
+        imgBackExercise1.setOnClickListener {
+            DialogUtils.showExerciseDialog(
+                requireContext(),
+                object : DialogUtils.exerciseDialogListener {
+                    override fun onItem1() {
+                    }
+
+                    override fun onItem2() {
+
+                    }
+
+                    override fun onItem3() {
+
+                    }
+
+                    override fun onDismiss() {
+
+                    }
+
+                    override fun onQuit() {
+//                        requireActivity().onBackPressed()
+                        requireActivity().finish()
+                    }
+                })
+        }
+
+        btnMovieExercise1.setOnClickListener {
+            startActivity(Intent(requireContext(), PauseActivity::class.java))
+        }
+        btnNextExercise1.setOnClickListener {
+            changePagerListener.let {
+                it.onNext()
+            }
+        }
     }
 
     fun fakeData() {
@@ -41,14 +76,18 @@ class ExerciseFragment1(val changePagerListener: ChangePagerListener) : Fragment
             override fun onTick(millisUntilFinished: Long) {
                 timecurrent = (millisUntilFinished / 1000).toInt()
                 progress = ((totalTime - millisUntilFinished) / 100).toInt()
-                progressCountDownExercise1.progress = progress.toFloat()
-                tvCountDownExcersice1.setText("${timecurrent}")
+                if (tvCountDownExcersice1 != null) {
+                    progressCountDownExercise1.progress = progress.toFloat()
+                    tvCountDownExcersice1.setText("${timecurrent}")
+                }
             }
 
             override fun onFinish() {
-                progressCountDownExercise1.progress = 100f
-                tvCountDownExcersice1.setText("0")
-                changePagerListener.onNext()
+                if (tvCountDownExcersice1 != null) {
+                    progressCountDownExercise1.progress = 100f
+                    tvCountDownExcersice1.setText("0")
+                    changePagerListener.onNext()
+                }
             }
         }.start()
     }

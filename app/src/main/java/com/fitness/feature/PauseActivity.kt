@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.Window
 import android.view.WindowManager
 import com.fitness.R
+import kotlinx.android.synthetic.main.activity_pause.*
 
 class PauseActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -15,5 +16,9 @@ class PauseActivity : AppCompatActivity() {
             WindowManager.LayoutParams.FLAG_FULLSCREEN
         );
         setContentView(R.layout.activity_pause)
+
+        btnBackPause.setOnClickListener {
+            onBackPressed()
+        }
     }
 }

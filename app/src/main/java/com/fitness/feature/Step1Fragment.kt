@@ -9,9 +9,10 @@ import android.view.ViewGroup
 import androidx.annotation.RequiresApi
 import androidx.fragment.app.Fragment
 import com.fitness.R
+import com.fitness.listener.ChangeSplashListener
 import kotlinx.android.synthetic.main.fragment_step_1.*
 
-class Step1Fragment : Fragment() {
+class Step1Fragment(val changeSplashListener: ChangeSplashListener) : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -25,6 +26,10 @@ class Step1Fragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-
+        btnGetStarted.setOnClickListener {
+            changeSplashListener.let {
+                it.onNext()
+            }
+        }
     }
 }

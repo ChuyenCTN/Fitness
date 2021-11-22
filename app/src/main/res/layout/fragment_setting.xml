@@ -395,9 +395,11 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
                     android:checked="false"
                     app:switchMinWidth="@dimen/dimen30"
-                    app:thumbTint="#979797" />
+                    app:thumbTint="#979797"
+                    app:trackTint="#E0E0E0" />
             </RelativeLayout>
 
             <TextView
