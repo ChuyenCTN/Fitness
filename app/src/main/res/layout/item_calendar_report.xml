@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/dimen56"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent">
+
+    <LinearLayout
+        android:id="@+id/layoutCalendarNormal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen4"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingVertical="@dimen/dimen9"
+        android:paddingHorizontal="@dimen/dimen6"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tvThItemCalendar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_light"
+            android:text="MON"
+            android:textAllCaps="true"
+            android:textColor="@color/color_text_item_calendar"
+            android:textSize="@dimen/sp13" />
+
+        <TextView
+            android:id="@+id/tvDayItemCalendar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen6"
+            android:fontFamily="@font/roboto_bold"
+            android:text="27"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp13" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutCalendarSelect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_item_select_report"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingVertical="@dimen/dimen9"
+        android:paddingHorizontal="@dimen/dimen6">
+
+        <TextView
+            android:id="@+id/tvThItemCalendarSelect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_regular"
+            android:text="MON"
+            android:textAllCaps="true"
+            android:textColor="@color/color_text_item_calendar"
+            android:textSize="@dimen/sp13" />
+
+        <TextView
+            android:id="@+id/tvDayItemCalendarSelect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen6"
+            android:background="@drawable/ic_ellipse"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center"
+            android:text="27"
+            android:textColor="@color/color_text_item_calendar_select"
+            android:textSize="@dimen/sp13" />
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -4,9 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginTop="@dimen/dimen16"
+    android:layout_marginBottom="@dimen/dimen16"
     android:background="@drawable/bg_item_list_training"
-    android:padding="@dimen/dimen14">
+    android:padding="@dimen/dimen12">
 
     <com.willy.ratingbar.ScaleRatingBar
         android:id="@+id/ratingItemBeginer"
@@ -30,7 +30,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/ratingItemBeginer"
         android:layout_alignParentLeft="true"
-        android:layout_marginTop="@dimen/dimen16"
+        android:layout_marginTop="@dimen/dimen14"
         android:layout_marginRight="@dimen/dimen16"
         android:layout_toLeftOf="@+id/imgContentItemBeginer"
         android:ellipsize="end"
@@ -62,7 +62,7 @@
 
     <ImageView
         android:id="@+id/imgContentItemBeginer"
-        android:layout_width="@dimen/dimen160"
+        android:layout_width="@dimen/dimen120"
         android:layout_height="@dimen/dimen50"
         android:layout_alignParentRight="true"
         android:layout_centerVertical="true"

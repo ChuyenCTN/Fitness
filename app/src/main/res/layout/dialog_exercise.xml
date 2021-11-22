@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_dialog_exercise"
+    android:orientation="vertical"
+    android:paddingHorizontal="@dimen/dimen20">
+
+    <ImageView
+        android:id="@+id/btnCloseDialogExersice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginTop="@dimen/dimen20"
+        android:src="@drawable/ic_close" />
+
+    <TextView
+        android:id="@+id/tvItemDilogExercise1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen56"
+        android:layout_marginTop="@dimen/dimen30"
+        android:background="@drawable/bg_item_dialog_exercise"
+        android:ellipsize="end"
+        android:fontFamily="@font/roboto_regular"
+        android:gravity="center_vertical"
+        android:maxLines="1"
+        android:paddingHorizontal="@dimen/dimen16"
+        android:text="@string/txt_item_1_dialog_exrcise"
+        android:textColor="@color/color_unit_select"
+        android:textSize="@dimen/sp16" />
+
+    <TextView
+        android:id="@+id/tvItemDilogExercise2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen56"
+        android:layout_marginTop="@dimen/dimen18"
+        android:background="@drawable/bg_item_dialog_exercise"
+        android:ellipsize="end"
+        android:fontFamily="@font/roboto_regular"
+        android:gravity="center_vertical"
+        android:maxLines="1"
+        android:paddingHorizontal="@dimen/dimen16"
+        android:text="@string/txt_item_2_dialog_exrcise"
+        android:textColor="@color/color_unit_select"
+        android:textSize="@dimen/sp16" />
+
+    <TextView
+        android:id="@+id/tvItemDilogExercise3"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen56"
+        android:layout_marginTop="@dimen/dimen18"
+        android:background="@drawable/bg_item_dialog_exercise"
+        android:ellipsize="end"
+        android:fontFamily="@font/roboto_regular"
+        android:gravity="center_vertical"
+        android:maxLines="1"
+        android:paddingHorizontal="@dimen/dimen16"
+        android:text="@string/txt_item_3_dialog_exrcise"
+        android:textColor="@color/color_unit_select"
+        android:textSize="@dimen/sp16" />
+
+    <Button
+        android:id="@+id/btnQuitDialogExercise"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen42"
+        android:layout_marginHorizontal="@dimen/dimen46"
+        android:layout_marginTop="@dimen/dimen32"
+        android:layout_marginBottom="@dimen/dimen46"
+        android:background="@drawable/bg_button_started"
+        android:fontFamily="@font/roboto_medium"
+        android:gravity="center"
+        android:text="@string/txt_quit"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp16" />
+
+</LinearLayout>

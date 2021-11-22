@@ -16,7 +16,6 @@ class TrainingSlideAdapter : RecyclerView.Adapter<TrainingSlideAdapter.ViewHolde
 
     lateinit var itemClick: itemClickListener
 
-
     @JvmName("setItemClick1")
     fun setItemClick(itemClickListener: itemClickListener) {
         this.itemClick = itemClickListener

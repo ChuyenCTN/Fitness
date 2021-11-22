@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutBottomSheetDetailBegin"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_bottom_beginer_detail"
+    app:layout_behavior="@string/bottom_sheet_behavior">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imgDetailBeginer"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen160"
+        android:layout_marginHorizontal="@dimen/dimen50"
+        android:layout_marginTop="@dimen/dimen20"
+        android:src="@drawable/img_detail_beginer"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/viewDetailBeginer"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen0"
+        android:layout_marginTop="@dimen/dimen20"
+        android:background="@color/color_bg_app"
+        app:layout_constraintTop_toBottomOf="@+id/imgDetailBeginer" />
+
+    <com.willy.ratingbar.ScaleRatingBar
+        android:id="@+id/ratingDetailBeginer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen16"
+        android:layout_marginTop="@dimen/dimen16"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/viewDetailBeginer"
+        app:srb_clearRatingEnabled="true"
+        app:srb_clickable="true"
+        app:srb_drawableEmpty="@drawable/ic_item_begin_empty"
+        app:srb_drawableFilled="@drawable/ic_item_begin_filled"
+        app:srb_isIndicator="false"
+        app:srb_minimumStars="1"
+        app:srb_numStars="3"
+        app:srb_scrollable="true"
+        app:srb_starPadding="@dimen/dimen3"
+        app:srb_stepSize="1"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tvAnimationDetailBeginer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/dimen16"
+        android:drawableLeft="@drawable/ic_image_bottomsheet"
+        android:drawablePadding="@dimen/dimen8"
+        android:fontFamily="@font/roboto_regular"
+        android:text="@string/txt_animation"
+        android:textColor="@color/color_text_step"
+        android:textSize="@dimen/sp16"
+        app:layout_constraintBottom_toBottomOf="@+id/ratingDetailBeginer"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ratingDetailBeginer" />
+
+    <TextView
+        android:id="@+id/tvTitleDetailBegin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen10"
+        android:fontFamily="@font/roboto_medium"
+        android:text="Straight Arm Knee Plank"
+        android:textAllCaps="true"
+        android:textColor="@color/color_wellcome_step1"
+        android:textSize="@dimen/sp17"
+        app:layout_constraintLeft_toLeftOf="@+id/ratingDetailBeginer"
+        app:layout_constraintTop_toBottomOf="@+id/ratingDetailBeginer" />
+
+    <TextView
+        android:id="@+id/tvContentDetailBegin"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen8"
+        android:fontFamily="@font/roboto_regular"
+        android:lineHeight="@dimen/dimen26"
+        android:text="Start in the push-up position, but keep your arms straight.this exercise strenthens yourabdomen and back muscles."
+        android:textColor="@color/color_content_detail_beginer"
+        android:textSize="@dimen/sp16"
+        app:layout_constraintLeft_toLeftOf="@+id/ratingDetailBeginer"
+        app:layout_constraintRight_toRightOf="@+id/tvAnimationDetailBeginer"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitleDetailBegin" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

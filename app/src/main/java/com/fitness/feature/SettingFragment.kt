@@ -18,7 +18,7 @@ class SettingFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_step_1, container, false)
+        return inflater.inflate(R.layout.fragment_setting, container, false)
     }
 
     @RequiresApi(Build.VERSION_CODES.N)

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_wellcome_step1"
+    tools:context=".feature.PauseActivity">
+
+    <ImageView
+        android:id="@+id/btnBackPause"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen18"
+        android:layout_marginTop="@dimen/dimen30"
+        android:clickable="true"
+        android:src="@drawable/ic_arrow_left_white"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvModePause"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/dimen16"
+        android:drawableLeft="@drawable/ic_wallpaper_white"
+        android:drawablePadding="@dimen/dimen8"
+        android:fontFamily="@font/roboto_regular"
+        android:text="@string/txt_animation"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp15"
+        app:layout_constraintBottom_toBottomOf="@+id/btnBackPause"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <RelativeLayout
+        android:id="@+id/layoutContentPause"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen260"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvModePause">
+
+        <ImageView
+            android:id="@+id/imgContentPause"
+            android:padding="@dimen/dimen46"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:src="@drawable/img_detail_beginer"
+            android:layout_height="@dimen/dimen260"
+            android:layout_marginTop="@dimen/dimen20"
+            android:visibility="visible" />
+
+        <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+            android:id="@+id/videoPlayPause"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen260"
+            android:layout_marginTop="@dimen/dimen20"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <com.willy.ratingbar.ScaleRatingBar
+        android:id="@+id/ratingPause"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen20"
+        app:layout_constraintLeft_toLeftOf="@+id/btnBackPause"
+        app:layout_constraintTop_toBottomOf="@+id/layoutContentPause"
+        app:srb_clearRatingEnabled="true"
+        app:srb_clickable="true"
+        app:srb_drawableEmpty="@drawable/ic_item_begin_empty"
+        app:srb_drawableFilled="@drawable/ic_item_begin_filled"
+        app:srb_isIndicator="false"
+        app:srb_minimumStars="1"
+        app:srb_numStars="3"
+        app:srb_scrollable="true"
+        app:srb_starPadding="@dimen/dimen3"
+        app:srb_stepSize="1"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tvTitlePause"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen6"
+        android:fontFamily="@font/roboto_regular"
+        android:text="Straight Arm Knee Plank - 20s"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp16"
+        app:layout_constraintLeft_toLeftOf="@+id/ratingPause"
+        app:layout_constraintTop_toBottomOf="@id/ratingPause" />
+
+    <TextView
+        android:id="@+id/tvContentPause"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen8"
+        android:layout_marginRight="@dimen/dimen16"
+        android:fontFamily="@font/roboto_regular"
+        android:lineHeight="@dimen/dimen26"
+        android:text="Start in the push-up position, but keep your arms straight.this exercise strenthens yourabdomen and back muscles."
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp16"
+        app:layout_constraintLeft_toLeftOf="@+id/ratingPause"
+        app:layout_constraintTop_toBottomOf="@id/tvTitlePause" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

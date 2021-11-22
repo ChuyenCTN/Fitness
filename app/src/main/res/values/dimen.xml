@@ -497,6 +497,7 @@
     <dimen name="dimen498">498dp</dimen>
     <dimen name="dimen499">499dp</dimen>
     <dimen name="dimen500">500dp</dimen>
+    <dimen name="dimen550">550dp</dimen>
 
 
     <dimen name="sp0">0sp</dimen>
@@ -541,5 +542,6 @@
     <dimen name="sp39">39sp</dimen>
     <dimen name="sp40">40sp</dimen>
     <dimen name="sp46">46sp</dimen>
+    <dimen name="sp50">50sp</dimen>
 
 </resources>

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imgBackExercise1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen18"
+        android:layout_marginTop="@dimen/dimen30"
+        android:clickable="true"
+        android:src="@drawable/ic_back"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvReadyExercise1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen30"
+        android:fontFamily="@font/roboto_medium"
+        android:text="@string/txt_ready"
+        android:textAllCaps="true"
+        android:textColor="@color/color_text_step"
+        android:textSize="@dimen/sp18"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTitleExercise1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen6"
+        android:fontFamily="@font/roboto_regular"
+        android:text="@string/txt_title_exercise1"
+        android:textAllCaps="true"
+        android:textColor="@color/color_wellcome_step1"
+        android:textSize="@dimen/sp15"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvReadyExercise1" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imgContentExercise1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen180"
+        android:layout_marginHorizontal="@dimen/dimen40"
+        android:layout_marginTop="@dimen/dimen150"
+        android:src="@drawable/img_detail_beginer"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitleExercise1" />
+
+    <ImageView
+        android:id="@+id/btnSoundExercise1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen28"
+        android:layout_marginRight="@dimen/dimen16"
+        android:clickable="true"
+        android:src="@drawable/ic_sound_exersice"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitleExercise1" />
+
+    <ImageView
+        android:id="@+id/btnMovieExercise1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen16"
+        android:layout_marginRight="@dimen/dimen16"
+        android:clickable="true"
+        android:src="@drawable/ic_movie_exercise"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnSoundExercise1" />
+
+    <ImageView
+        android:id="@+id/btnSupportExercise1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen16"
+        android:layout_marginRight="@dimen/dimen16"
+        android:clickable="true"
+        android:src="@drawable/ic_support_exercise"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnMovieExercise1" />
+
+    <RelativeLayout
+        android:id="@+id/layoutCountDownExercise1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen80"
+        app:layout_constraintTop_toBottomOf="@+id/imgContentExercise1">
+
+        <TextView
+            android:id="@+id/tvCountDownExcersice1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/roboto_medium"
+            android:text="7"
+            android:textColor="@color/color_wellcome_step1"
+            android:textSize="@dimen/sp50" />
+
+        <com.mikhaellopez.circularprogressbar.CircularProgressBar
+            android:id="@+id/progressCountDownExercise1"
+            android:layout_width="@dimen/dimen140"
+            android:layout_height="@dimen/dimen140"
+            android:layout_centerInParent="true"
+            app:cpb_background_progressbar_color="@color/color_progress_select"
+            app:cpb_background_progressbar_width="@dimen/dimen7"
+            app:cpb_progress_direction="to_right"
+            app:cpb_progressbar_color="@color/color_progress_selected"
+            app:cpb_progressbar_width="@dimen/dimen8"
+            app:cpb_round_border="true" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layoutStateProgressExercise1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen80"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/imgContentExercise1">
+
+        <com.mikhaellopez.circularprogressbar.CircularProgressBar
+            android:id="@+id/progressExercise1"
+            android:layout_width="@dimen/dimen180"
+            android:layout_height="@dimen/dimen180"
+            android:layout_centerInParent="true"
+            app:cpb_background_progressbar_color="@color/color_progress_select"
+            app:cpb_background_progressbar_width="@dimen/dimen7"
+            app:cpb_progress="40"
+            app:cpb_progress_direction="to_right"
+            app:cpb_progressbar_color="@color/color_progress_selected"
+            app:cpb_progressbar_width="@dimen/dimen8"
+            app:cpb_round_border="true" />
+
+        <View
+            android:layout_width="@dimen/dimen140"
+            android:layout_height="@dimen/dimen140"
+            android:layout_centerInParent="true"
+            android:background="@drawable/bg_state_exercise" />
+
+        <ImageView
+            android:id="@+id/imgStateExercise1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_pause_state" />
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

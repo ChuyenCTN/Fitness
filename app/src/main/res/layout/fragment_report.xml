@@ -1,7 +1,452 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:background="@color/white"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/color_bg_app"
+    android:paddingBottom="@dimen/dimen20">
+
+    <LinearLayout
+        android:id="@+id/layoutReport1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen260"
+        android:background="@color/color_bg_report2"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen30"
+            android:fontFamily="@font/roboto_medium"
+            android:text="@string/txt_calendar"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp18" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcvCalendarReport"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimen10"
+            android:layout_marginTop="@dimen/dimen16" />
+
+        <TextView
+            android:id="@+id/tvRecordsReport"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen20"
+            android:drawableRight="@drawable/ic_arrow_right_records"
+            android:drawablePadding="@dimen/dimen2"
+            android:fontFamily="@font/roboto_regular"
+            android:text="@string/txt_record"
+            android:textAllCaps="false"
+            android:textColor="@color/color_text_record"
+            android:textSize="@dimen/sp15" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutReport2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen100"
+        android:layout_marginHorizontal="@dimen/dimen18"
+        android:layout_marginTop="@dimen/dimen210"
+        android:background="@drawable/bg_layout_report"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen14"
+            android:layout_marginTop="@dimen/dimen10"
+            android:fontFamily="@font/roboto_regular"
+            android:text="@string/txt_total"
+            android:textAllCaps="true"
+            android:textColor="@color/color_wellcome_step1"
+            android:textSize="@dimen/sp15" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dimen8"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvCountExerciseComplete"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="6"
+                    android:textColor="@color/color_text_step"
+                    android:textSize="@dimen/sp20" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen4"
+                    android:fontFamily="@font/roboto_light"
+                    android:text="@string/txt_workout"
+                    android:textColor="@color/color_text_content_1"
+                    android:textSize="@dimen/sp12" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvKCalReport"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="0.0"
+                    android:textColor="@color/color_text_step"
+                    android:textSize="@dimen/sp20" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen4"
+                    android:fontFamily="@font/roboto_light"
+                    android:text="@string/txt_kcal"
+                    android:textAllCaps="true"
+                    android:textColor="@color/color_text_content_1"
+                    android:textSize="@dimen/sp12" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvDurationReport"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="00:00"
+                    android:textColor="@color/color_text_step"
+                    android:textSize="@dimen/sp20" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen4"
+                    android:fontFamily="@font/roboto_light"
+                    android:text="@string/txt_duration"
+                    android:textColor="@color/color_text_content_1"
+                    android:textSize="@dimen/sp12" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dimen16"
+        android:layout_marginTop="@dimen/dimen26"
+        android:background="@drawable/bg_card_step_2"
+        app:layout_constraintTop_toBottomOf="@+id/layoutReport2">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen14"
+            android:layout_marginRight="@dimen/dimen14"
+            android:layout_marginBottom="@dimen/dimen20"
+            android:paddingTop="@dimen/dimen14">
+
+            <TextView
+                android:id="@+id/tvUnitBmiComplete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/txt_bmi"
+                android:textColor="@color/color_wellcome_step1"
+                android:textSize="@dimen/sp16"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvEdit1Complete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableRight="@drawable/ic_edit"
+                android:drawablePadding="@dimen/dimen4"
+                android:fontFamily="@font/roboto_regular"
+                android:text="@string/txt_edit"
+                android:textColor="@color/color_wellcome_step1"
+                android:textSize="@dimen/sp13"
+                app:layout_constraintBottom_toBottomOf="@+id/tvUnitBmiComplete"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvComplete1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen60"
+                android:layout_marginBottom="@dimen/dimen6"
+                android:background="@drawable/ic_group_80"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="center_horizontal"
+                android:text="19.1"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp14"
+                app:layout_constraintBottom_toTopOf="@+id/layoutColorComplete"
+                app:layout_constraintLeft_toLeftOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/layoutColorComplete"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen43"
+                android:orientation="horizontal"
+                android:weightSum="6.75"
+                app:layout_constraintTop_toBottomOf="@+id/tvUnitBmiComplete">
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dimen56"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/bg_bmi_1" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dimen56"
+                    android:layout_weight="0.1"
+                    android:background="@android:color/transparent" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dimen56"
+                    android:layout_weight="0.75"
+                    android:background="@drawable/bg_bmi_2" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dimen56"
+                    android:layout_weight="0.1"
+                    android:background="@android:color/transparent" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dimen56"
+                    android:layout_weight="2"
+                    android:background="@drawable/bg_bmi_3" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dimen56"
+                    android:layout_weight="0.1"
+                    android:background="@android:color/transparent" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dimen56"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_bmi_4" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dimen56"
+                    android:layout_weight="0.1"
+                    android:background="@android:color/transparent" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dimen56"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_bmi_5" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dimen56"
+                    android:layout_weight="0.1"
+                    android:background="@android:color/transparent" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dimen56"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_bmi_6" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutNumberColorComplete"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen10"
+                android:orientation="horizontal"
+                android:weightSum="40"
+                app:layout_constraintTop_toBottomOf="@+id/layoutColorComplete">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="15"
+                    android:textColor="@color/color_content_step1"
+                    android:textSize="@dimen/sp14" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="16"
+                    android:textColor="@color/color_content_step1"
+                    android:textSize="@dimen/sp14" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="13"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="18.5"
+                    android:textColor="@color/color_content_step1"
+                    android:textSize="@dimen/sp14" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="6.5"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="25"
+                    android:textColor="@color/color_content_step1"
+                    android:textSize="@dimen/sp14" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="6.5"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="30"
+                    android:textColor="@color/color_content_step1"
+                    android:textSize="@dimen/sp14" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="30"
+                    android:textColor="@color/color_content_step1"
+                    android:textSize="@dimen/sp14" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:fontFamily="@font/roboto_regular"
+                    android:gravity="right"
+                    android:text="30"
+                    android:textColor="@color/color_content_step1"
+                    android:textSize="@dimen/sp14" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/viewHealthyComplete"
+                android:layout_width="@dimen/dimen14"
+                android:layout_height="@dimen/dimen14"
+                android:layout_marginTop="@dimen/dimen20"
+                android:background="@drawable/bg_bmi_3"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layoutNumberColorComplete" />
+
+            <TextView
+                android:id="@+id/tvHealthyComplete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen8"
+                android:fontFamily="@font/roboto_regular"
+                android:text="@string/txt_label_healthy"
+                android:textColor="@color/color_wellcome_step1"
+                android:textSize="@dimen/sp14"
+                app:layout_constraintBottom_toBottomOf="@+id/viewHealthyComplete"
+                app:layout_constraintLeft_toRightOf="@+id/viewHealthyComplete" />
+
+            <View
+                android:id="@+id/lineComplete"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginHorizontal="@dimen/dimen16"
+                android:layout_marginTop="@dimen/dimen16"
+                android:background="#F4F4F4"
+                app:layout_constraintTop_toBottomOf="@+id/tvHealthyComplete" />
+
+            <TextView
+                android:id="@+id/tvLabel1Complete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen16"
+                android:fontFamily="@font/roboto_regular"
+                android:text="@string/txt_height"
+                android:textColor="@color/color_wellcome_step1"
+                android:textSize="@dimen/sp14"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lineComplete" />
+
+            <TextView
+                android:id="@+id/tvLabel2Complete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen10"
+                android:fontFamily="@font/roboto_regular"
+                android:text="@string/txt_current"
+                android:textColor="@color/color_content_step1"
+                android:textSize="@dimen/sp14"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvLabel1Complete" />
+
+            <TextView
+                android:id="@+id/tvEdit2Complete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableRight="@drawable/ic_edit"
+                android:drawablePadding="@dimen/dimen4"
+                android:fontFamily="@font/roboto_regular"
+                android:text="@string/txt_edit"
+                android:textColor="@color/color_wellcome_step1"
+                android:textSize="@dimen/sp13"
+                app:layout_constraintBottom_toBottomOf="@+id/tvLabel1Complete"
+                app:layout_constraintRight_toRightOf="parent" />
+
+            <TextView
+                android:id="@+id/tvValueCurrentcomplete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/dimen4"
+                android:fontFamily="@font/roboto_regular"
+                android:text="170.0 cm"
+                android:textAllCaps="true"
+                android:textColor="@color/color_text_step"
+                android:textSize="@dimen/sp16"
+                app:layout_constraintBottom_toBottomOf="@+id/tvLabel2Complete"
+                app:layout_constraintRight_toRightOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </RelativeLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

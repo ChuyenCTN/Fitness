@@ -1,5 +1,6 @@
 package com.fitness.feature
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Window
@@ -10,9 +11,12 @@ import com.fitness.adapter.BeginingListAdapter
 import com.fitness.adapter.TraingListAdapter
 import com.fitness.model.ItemListBegining
 import com.fitness.model.ItemTraining
+import com.google.android.material.bottomsheet.BottomSheetBehavior
 import kotlinx.android.synthetic.main.activity_begin.*
+import kotlinx.android.synthetic.main.bottom_sheet_beginer_detail.*
 import kotlinx.android.synthetic.main.fragment_training.*
 import kotlinx.android.synthetic.main.fragment_training.rcvTraining
+import android.util.DisplayMetrics
 
 class BeginActivity : AppCompatActivity() {
 
@@ -30,6 +34,11 @@ class BeginActivity : AppCompatActivity() {
 
         setUpRCV()
         fakeData()
+        initBottomSheet()
+
+        btnStartBegin.setOnClickListener {
+            startActivity(Intent(this, ExerciseStartActivity::class.java))
+        }
 
     }
 
@@ -41,13 +50,41 @@ class BeginActivity : AppCompatActivity() {
             rcvBegin.layoutManager = layoutManager
             rcvBegin.adapter = adapter
         }
+
     }
 
     fun fakeData() {
         var responseList: ArrayList<ItemListBegining> = ArrayList()
         for (i in 1..10) {
-            responseList.add(ItemListBegining("Day ${i}", "0${i}:1${i}",R.drawable.image_item_beginer,2))
+            responseList.add(
+                ItemListBegining(
+                    "Day ${i}",
+                    "0${i}:1${i}",
+                    R.drawable.image_item_beginer,
+                    2
+                )
+            )
         }
         adapter.setData(responseList)
+    }
+
+
+    private fun initBottomSheet() {
+        var sheetBehavior = BottomSheetBehavior.from(layoutBottomSheetDetailBegin)
+        sheetBehavior.setState(BottomSheetBehavior.STATE_COLLAPSED)
+        sheetBehavior.peekHeight = 0
+
+
+        val displayMetrics = DisplayMetrics()
+        windowManager.defaultDisplay.getMetrics(displayMetrics)
+        val height = displayMetrics.heightPixels
+        val width = displayMetrics.widthPixels
+        sheetBehavior.maxHeight = height * 80 / 100
+
+        adapter.setItemClick(object : BeginingListAdapter.itemClickListener {
+            override fun onClick(item: ItemListBegining) {
+                sheetBehavior.state = BottomSheetBehavior.STATE_EXPANDED
+            }
+        })
     }
 }

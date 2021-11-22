@@ -24,5 +24,23 @@
     <color name="color_bg_gender">#DBDBDB</color>
     <color name="color_stroke_properties">#DCDCDC</color>
     <color name="color_view_left_label_routine">#2E4ADC</color>
+    <color name="color_content_detail_beginer">#4D4D56</color>
+    <color name="color_selected_exercise">#7286FF</color>
+    <color name="color_un_select_exercise">#DADFE2</color>
+    <color name="color_progress_select">#A19AEB</color>
+    <color name="color_progress_selected">#7AEAEC</color>
+    <color name="color_progress_select_1">#80E5E5E5</color>
+    <color name="color_progress_selected_1">#6556AA</color>
+    <color name="color_bg_selected_dialog">#A19AEC</color>
+    <color name="color_over_rest">#26243C</color>
+    <color name="color_congratulation_text">#FFE07D</color>
+    <color name="color_text_complete">#8E93B6</color>
+    <color name="color_bg_report">#C8C8C8</color>
+    <color name="color_bg_report2">#8B80F8</color>
+    <color name="color_bg_item_select_report">#7165E3</color>
+    <color name="color_text_record">#E2E2E2</color>
+    <color name="color_text_item_calendar">#DFDBFE</color>
+    <color name="color_text_item_calendar_select">#4939CD</color>
+    <color name="color_bg_setting">#F7F8FA</color>
 
 </resources>

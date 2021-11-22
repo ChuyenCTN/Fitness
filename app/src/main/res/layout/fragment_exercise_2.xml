@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_bg_app">
+
+    <ImageView
+        android:id="@+id/imgBackExercise2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen18"
+        android:layout_marginTop="@dimen/dimen30"
+        android:clickable="true"
+        android:src="@drawable/ic_back"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTimeExercise2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen30"
+        android:fontFamily="@font/roboto_medium"
+        android:text="00:20"
+        android:textAllCaps="true"
+        android:textColor="@color/color_text_step"
+        android:textSize="@dimen/sp22"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTitleExercise2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen6"
+        android:fontFamily="@font/roboto_regular"
+        android:text="@string/txt_title_exercise1"
+        android:textAllCaps="true"
+        android:textColor="@color/color_wellcome_step1"
+        android:textSize="@dimen/sp15"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTimeExercise2" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imgContentExercise2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen180"
+        android:layout_marginHorizontal="@dimen/dimen40"
+        android:layout_marginTop="@dimen/dimen150"
+        android:src="@drawable/img_detail_beginer"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitleExercise2" />
+
+    <ImageView
+        android:id="@+id/btnSoundExercise2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen28"
+        android:layout_marginRight="@dimen/dimen16"
+        android:clickable="true"
+        android:src="@drawable/ic_sound_exersice"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitleExercise2" />
+
+    <ImageView
+        android:id="@+id/btnMovieExercise2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen16"
+        android:layout_marginRight="@dimen/dimen16"
+        android:clickable="true"
+        android:src="@drawable/ic_movie_exercise"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnSoundExercise2" />
+
+    <ImageView
+        android:id="@+id/btnSupportExercise2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen16"
+        android:layout_marginRight="@dimen/dimen16"
+        android:clickable="true"
+        android:src="@drawable/ic_support_exercise"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnMovieExercise2" />
+
+    <RelativeLayout
+        android:id="@+id/layoutStateProgressExrcise2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen80"
+        app:layout_constraintTop_toBottomOf="@+id/imgContentExercise2">
+
+        <com.mikhaellopez.circularprogressbar.CircularProgressBar
+            android:id="@+id/progressExercide2"
+            android:layout_width="@dimen/dimen180"
+            android:layout_height="@dimen/dimen180"
+            android:layout_centerInParent="true"
+            app:cpb_background_progressbar_color="@color/color_progress_select"
+            app:cpb_background_progressbar_width="@dimen/dimen7"
+            app:cpb_progress="40"
+            app:cpb_progress_direction="to_right"
+            app:cpb_progressbar_color="@color/color_progress_selected"
+            app:cpb_progressbar_width="@dimen/dimen8"
+            app:cpb_round_border="true" />
+
+        <View
+            android:layout_width="@dimen/dimen140"
+            android:layout_height="@dimen/dimen140"
+            android:layout_centerInParent="true"
+            android:background="@drawable/bg_state_exercise" />
+
+        <ImageView
+            android:id="@+id/btnStateExercise2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_pause_state" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/progressExercide2">
+
+            <ImageView
+                android:id="@+id/btnPreviousExercise2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/ic_back" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/progressExercide2">
+
+            <ImageView
+                android:id="@+id/btnNextExercise2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:rotation="180"
+                android:src="@drawable/ic_back" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

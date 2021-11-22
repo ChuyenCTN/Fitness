@@ -6,6 +6,7 @@
     android:layout_height="match_parent">
 
     <ImageView
+        android:id="@+id/btnBackStep4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/dimen18"
@@ -63,7 +64,7 @@
         android:background="@drawable/bg_button_started"
         android:fontFamily="@font/roboto_medium"
         android:gravity="center"
-        android:text="@string/txt_continue"
+        android:text="@string/txt_start"
         android:textAllCaps="true"
         android:textColor="@color/white"
         android:textSize="@dimen/sp16"

@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/layoutContentImagePause"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen550"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imgContentExercise4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/image_rest_screen" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#E026243C" />
+
+        <TextView
+            android:id="@+id/tvCountDownExcersice3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/roboto_medium"
+            android:text="26"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp50" />
+
+        <com.mikhaellopez.circularprogressbar.CircularProgressBar
+            android:id="@+id/progressCountDownExercise3"
+            android:layout_width="@dimen/dimen130"
+            android:layout_height="@dimen/dimen130"
+            android:layout_centerInParent="true"
+            app:cpb_background_progressbar_color="@color/color_progress_select_1"
+            app:cpb_background_progressbar_width="@dimen/dimen7"
+            app:cpb_progress="38"
+            app:cpb_progress_direction="to_right"
+            app:cpb_progressbar_color="@color/color_progress_selected_1"
+            app:cpb_progressbar_width="@dimen/dimen8"
+            app:cpb_round_border="true" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/progressCountDownExercise3">
+
+            <TextView
+                android:id="@+id/tvAddTimeExercise3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/bg_text_add_time"
+                android:fontFamily="@font/roboto_regular"
+                android:paddingHorizontal="@dimen/dimen12"
+                android:paddingVertical="@dimen/dimen2"
+                android:text="+20s"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp14" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/progressCountDownExercise3">
+
+            <TextView
+                android:id="@+id/tvSkipExercise3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/roboto_regular"
+                android:padding="@dimen/dimen6"
+                android:paddingHorizontal="@dimen/dimen12"
+                android:paddingVertical="@dimen/dimen2"
+                android:text="@string/txt_skip"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp16" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/btnBackExercise3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen18"
+        android:layout_marginTop="@dimen/dimen30"
+        android:clickable="true"
+        android:src="@drawable/ic_arrow_left_white"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvNextExercise3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen18"
+        android:layout_marginTop="@dimen/dimen18"
+        android:fontFamily="@font/roboto_regular"
+        android:text="Next 2/6"
+        android:textAllCaps="true"
+        android:textColor="@color/color_text_content_1"
+        android:textSize="@dimen/sp12"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutContentImagePause" />
+
+    <com.willy.ratingbar.ScaleRatingBar
+        android:id="@+id/ratingExercise3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen16"
+        android:layout_marginTop="@dimen/dimen16"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvNextExercise3"
+        app:srb_clearRatingEnabled="true"
+        app:srb_clickable="true"
+        app:srb_drawableEmpty="@drawable/ic_item_begin_empty"
+        app:srb_drawableFilled="@drawable/ic_item_begin_filled"
+        app:srb_isIndicator="false"
+        app:srb_minimumStars="1"
+        app:srb_numStars="3"
+        app:srb_scrollable="true"
+        app:srb_starPadding="@dimen/dimen3"
+        app:srb_stepSize="1"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tvTitleExercise3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen2"
+        android:fontFamily="@font/roboto_regular"
+        android:gravity="left"
+        android:maxLines="2"
+        android:text="Kneeling side plank left"
+        android:textAllCaps="true"
+        android:textColor="@color/color_wellcome_step1"
+        android:textSize="@dimen/sp14"
+        app:layout_constraintLeft_toLeftOf="@+id/ratingExercise3"
+        app:layout_constraintTop_toBottomOf="@+id/ratingExercise3" />
+
+    <TextView
+        android:id="@+id/tvLeftTimeExercise3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen6"
+        android:fontFamily="@font/roboto_regular"
+        android:text="00:06"
+        android:textAllCaps="true"
+        android:textColor="@color/color_wellcome_step1"
+        android:textSize="@dimen/sp16"
+        app:layout_constraintLeft_toLeftOf="@+id/ratingExercise3"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitleExercise3" />
+
+    <ImageView
+        android:id="@+id/imgExercise3"
+        android:layout_width="@dimen/dimen180"
+        android:layout_height="@dimen/dimen100"
+        android:layout_marginRight="@dimen/dimen16"
+        android:background="@color/white"
+        android:paddingHorizontal="@dimen/dimen18"
+        android:src="@drawable/image_item_beginer"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvNextExercise3" />
+</androidx.constraintlayout.widget.ConstraintLayout>

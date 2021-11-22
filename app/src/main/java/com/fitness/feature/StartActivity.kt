@@ -26,14 +26,6 @@ class StartActivity : AppCompatActivity() {
         setContentView(R.layout.activity_start)
 
         setupViewPager(vpStart)
-
-
-        Handler().postDelayed(
-            Runnable {
-                startActivity(Intent(this, MainActivity::class.java))
-                finish()
-            }, 200
-        )
     }
 
     private fun setupViewPager(viewPager: ViewPager) {

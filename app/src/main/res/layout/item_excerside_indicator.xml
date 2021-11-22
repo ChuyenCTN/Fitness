@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <View
+        android:id="@+id/indicatorExerciseUnSelect"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen6"
+        android:layout_centerVertical="true"
+        android:background="@color/color_un_select_exercise"
+        android:visibility="visible" />
+
+    <View
+        android:id="@+id/indicatorExerciseSelected"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen8"
+        android:layout_centerVertical="true"
+        android:background="@color/color_selected_exercise"
+        android:visibility="gone" />
+</RelativeLayout>

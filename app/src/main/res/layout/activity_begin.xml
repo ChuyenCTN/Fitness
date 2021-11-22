@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,93 +7,131 @@
     android:background="@color/color_bg_app"
     tools:context=".feature.BeginActivity">
 
-    <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/imgContentBegin"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/dimen200"
-        android:scaleType="centerCrop"
-        android:src="@drawable/image_slide_1"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_height="match_parent">
 
-    <com.willy.ratingbar.ScaleRatingBar
-        android:id="@+id/ratingBegin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/dimen20"
-        android:layout_marginTop="@dimen/dimen56"
-        android:layout_marginRight="@dimen/dimen10"
-        app:layout_constraintBottom_toBottomOf="@+id/tvContentBegin"
-        app:layout_constraintRight_toRightOf="@+id/imgContentBegin"
-        app:srb_clearRatingEnabled="true"
-        app:srb_clickable="true"
-        app:srb_drawableEmpty="@drawable/ic_light_empty"
-        app:srb_drawableFilled="@drawable/ic_light_fill"
-        app:srb_isIndicator="false"
-        app:srb_minimumStars="1"
-        app:srb_numStars="3"
-        app:srb_scrollable="true"
-        app:srb_starPadding="@dimen/dimen3"
-        app:srb_stepSize="1"
-        tools:ignore="MissingConstraints" />
-
-    <TextView
-        android:id="@+id/tvTitleBegin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/dimen16"
-        android:ellipsize="end"
-        android:fontFamily="@font/roboto_medium"
-        android:maxLines="1"
-        android:text="txt_title_training"
-        android:textColor="@color/white"
-        android:textSize="@dimen/sp20"
-        app:layout_constraintLeft_toLeftOf="@+id/imgContentBegin"
-        app:layout_constraintTop_toTopOf="@+id/imgContentBegin" />
-
-    <TextView
-        android:id="@+id/tvContentBegin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/dimen16"
-        android:ellipsize="end"
-        android:fontFamily="@font/roboto_medium"
-        android:maxLines="1"
-        android:text="txt_title_training"
-        android:textColor="@color/white"
-        android:textSize="@dimen/sp17"
-        app:layout_constraintBottom_toTopOf="@+id/tvTimeBegin"
-        app:layout_constraintLeft_toLeftOf="@+id/imgContentBegin" />
-
-    <TextView
-        android:id="@+id/tvTimeBegin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/dimen16"
-        android:layout_marginBottom="@dimen/dimen10"
-        android:ellipsize="end"
-        android:fontFamily="@font/roboto_light"
-        android:maxLines="1"
-        android:text="txt_title_training"
-        android:textColor="@color/white"
-        android:textSize="@dimen/sp13"
-        app:layout_constraintBottom_toBottomOf="@+id/imgContentBegin"
-        app:layout_constraintLeft_toLeftOf="@+id/imgContentBegin" />
-
-    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
-        android:id="@+id/swipeRefreshBegin"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginHorizontal="@dimen/dimen16"
-        android:layout_marginTop="@dimen/dimen16"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgContentBegin">
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rcvBegin"
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imgContentBegin"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="@dimen/dimen220"
+            android:scaleType="centerCrop"
+            android:src="@drawable/image_slide_1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen18"
+            android:layout_marginTop="@dimen/dimen30"
+            android:clickable="true"
+            android:src="@drawable/ic_arrow_left_white"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.willy.ratingbar.ScaleRatingBar
+            android:id="@+id/ratingBegin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/tvContentBegin"
+            app:layout_constraintLeft_toLeftOf="@+id/tvContentBegin"
+            app:srb_clearRatingEnabled="true"
+            app:srb_clickable="true"
+            app:srb_drawableEmpty="@drawable/ic_light_empty"
+            app:srb_drawableFilled="@drawable/ic_light_fill"
+            app:srb_isIndicator="false"
+            app:srb_minimumStars="1"
+            app:srb_numStars="3"
+            app:srb_rating="2"
+            app:srb_scrollable="true"
+            app:srb_starPadding="@dimen/dimen3"
+            app:srb_stepSize="1"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/tvContentBegin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen16"
+            android:layout_marginBottom="@dimen/dimen8"
+            android:ellipsize="end"
+            android:fontFamily="@font/roboto_medium"
+            android:maxLines="1"
+            android:text="BEGINNER - day 1"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp20"
+            app:layout_constraintBottom_toTopOf="@+id/tvTimeBegin"
+            app:layout_constraintLeft_toLeftOf="@+id/imgContentBegin" />
+
+        <TextView
+            android:id="@+id/tvTimeBegin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen16"
+            android:layout_marginBottom="@dimen/dimen18"
+            android:drawableLeft="@drawable/ic_clock_left_white"
+            android:drawablePadding="@dimen/dimen5"
+            android:ellipsize="end"
+            android:fontFamily="@font/roboto_light"
+            android:maxLines="1"
+            android:text="3 mins"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp13"
+            app:layout_constraintBottom_toBottomOf="@+id/imgContentBegin"
+            app:layout_constraintLeft_toLeftOf="@+id/imgContentBegin" />
+
+        <TextView
+            android:id="@+id/tvWorkBegin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen16"
+            android:layout_marginBottom="@dimen/dimen18"
+            android:drawableLeft="@drawable/ic_light_left_white"
+            android:drawablePadding="@dimen/dimen5"
+            android:ellipsize="end"
+            android:fontFamily="@font/roboto_light"
+            android:maxLines="1"
+            android:text="6 workouts"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp13"
+            app:layout_constraintBottom_toBottomOf="@+id/imgContentBegin"
+            app:layout_constraintLeft_toRightOf="@+id/tvTimeBegin" />
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipeRefreshBegin"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginHorizontal="@dimen/dimen16"
+            android:layout_marginTop="@dimen/dimen16"
+            app:layout_constraintBottom_toTopOf="@+id/btnStartBegin"
+            app:layout_constraintTop_toBottomOf="@+id/imgContentBegin">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcvBegin"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        <TextView
+            android:id="@+id/btnStartBegin"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen50"
+            android:background="@color/color_text_step"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center"
+            android:text="@string/txt_start"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp16"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <include layout="@layout/bottom_sheet_beginer_detail"></include>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

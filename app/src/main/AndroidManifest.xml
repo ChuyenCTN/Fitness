@@ -10,6 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Fitness">
         <activity
+            android:name=".feature.CompleteActivity"
+            android:exported="false" />
+        <activity
+            android:name=".feature.PauseActivity"
+            android:exported="false" />
+        <activity
+            android:name=".feature.ExerciseStartActivity"
+            android:exported="false" />
+        <activity
             android:name=".feature.BeginActivity"
             android:exported="true" />
         <activity

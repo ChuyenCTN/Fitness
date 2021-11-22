@@ -1,11 +1,13 @@
 package com.fitness.feature
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.fitness.R
+import kotlinx.android.synthetic.main.fragment_step_4.*
 
 class Step4Fragment : Fragment() {
 
@@ -19,6 +21,8 @@ class Step4Fragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+        btnContinueStep4.setOnClickListener {
+            requireContext().startActivity(Intent(requireContext(), MainActivity::class.java))
+        }
     }
 }

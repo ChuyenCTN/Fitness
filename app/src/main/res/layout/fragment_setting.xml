@@ -1,7 +1,635 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:background="@color/white"
-    android:layout_height="match_parent">
+    android:orientation="vertical">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_bg_setting"
+        android:paddingBottom="@dimen/dimen18"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/tvLabbelSetting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen30"
+            android:fontFamily="@font/roboto_medium"
+            android:text="@string/txt_title_setting"
+            android:textAllCaps="true"
+            android:textColor="@color/color_text_step"
+            android:textSize="@dimen/sp18"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imgAvatarSetting"
+            android:layout_width="@dimen/dimen60"
+            android:layout_height="@dimen/dimen60"
+            android:layout_marginStart="@dimen/dimen18"
+            android:layout_marginTop="@dimen/dimen16"
+            android:background="@color/color_bg_setting"
+            android:src="@drawable/img_avatar"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvLabbelSetting"
+            app:shapeAppearanceOverlay="@style/circle" />
+
+        <TextView
+            android:id="@+id/tvNameSetting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen12"
+            android:layout_marginTop="@dimen/dimen6"
+            android:drawableEnd="@drawable/ic_setting1"
+            android:drawablePadding="@dimen/dimen10"
+            android:fontFamily="@font/roboto_regular"
+            android:gravity="start"
+            android:text="Nguyen Khac Hieu"
+            android:textColor="@color/color_wellcome_step1"
+            android:textSize="@dimen/sp16"
+            app:layout_constraintLeft_toRightOf="@+id/imgAvatarSetting"
+            app:layout_constraintTop_toTopOf="@+id/imgAvatarSetting" />
+
+        <TextView
+            android:id="@+id/tvSyncTimeSetting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen12"
+            android:layout_marginTop="@dimen/dimen3"
+            android:drawablePadding="@dimen/dimen10"
+            android:fontFamily="@font/roboto_light"
+            android:gravity="start"
+            android:text="Last synchronization: 12:33 PM"
+            android:textColor="@color/color_wellcome_step1"
+            android:textSize="@dimen/sp13"
+            app:layout_constraintLeft_toRightOf="@+id/imgAvatarSetting"
+            app:layout_constraintTop_toBottomOf="@+id/tvNameSetting" />
+
+        <ImageView
+            android:id="@+id/btnSyncSetting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen12"
+            android:layout_marginTop="@dimen/dimen10"
+            android:layout_marginEnd="@dimen/dimen18"
+            android:src="@drawable/ic_setting2"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvNameSetting" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen10"
+        android:background="@color/color_bg_app"
+        android:visibility="gone">
+
+
+        <TextView
+            android:id="@+id/tvLabelRemoveAds"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen18"
+            android:layout_marginTop="@dimen/dimen10"
+            android:drawablePadding="@dimen/dimen10"
+            android:fontFamily="@font/roboto_regular"
+            android:gravity="start"
+            android:text="@string/txt_remove_ads"
+            android:textColor="@color/color_wellcome_step1"
+            android:textSize="@dimen/sp16" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvLabelRemoveAds"
+            android:layout_marginStart="@dimen/dimen18"
+            android:layout_marginTop="@dimen/dimen4"
+            android:layout_marginBottom="@dimen/dimen10"
+            android:drawablePadding="@dimen/dimen10"
+            android:fontFamily="@font/roboto_light"
+            android:gravity="start"
+            android:text="@string/txt_label_setting2"
+            android:textColor="@color/color_content_step1"
+            android:textSize="@dimen/sp13" />
+
+        <TextView
+            android:id="@+id/tvPriceRemoveAds1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/dimen18"
+            android:layout_marginTop="@dimen/dimen4"
+            android:layout_marginBottom="@dimen/dimen10"
+            android:layout_toLeftOf="@+id/tvPriceRemoveAds2"
+            android:drawablePadding="@dimen/dimen10"
+            android:fontFamily="@font/roboto_light"
+            android:gravity="start"
+            android:text="579999.94"
+            android:textColor="@color/color_content_step1"
+            android:textSize="@dimen/sp13" />
+
+        <TextView
+            android:id="@+id/tvPriceRemoveAds2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/dimen10"
+            android:layout_marginTop="@dimen/dimen4"
+            android:layout_marginEnd="@dimen/dimen18"
+            android:layout_marginBottom="@dimen/dimen10"
+            android:background="@drawable/bg_button_price"
+            android:drawablePadding="@dimen/dimen10"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="start"
+            android:paddingHorizontal="@dimen/dimen12"
+            android:paddingVertical="@dimen/dimen8"
+            android:text="116.000đ"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp16" />
+
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_regular"
+                android:paddingHorizontal="@dimen/dimen18"
+                android:paddingVertical="@dimen/dimen12"
+                android:text="@string/txt_workout_setting"
+                android:textAllCaps="false"
+                android:textColor="@color/color_wellcome_step1"
+                android:textSize="@dimen/sp16" />
+
+            <TextView
+                android:id="@+id/btnSoundSetting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_bg_app"
+                android:drawableStart="@drawable/ic_setting3"
+                android:drawableEnd="@drawable/ic_arror_right_item_setting"
+                android:drawablePadding="@dimen/dimen12"
+                android:fontFamily="@font/roboto_light"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="@dimen/dimen18"
+                android:paddingVertical="@dimen/dimen10"
+                android:text="@string/txt_item_setting1"
+                android:textColor="@color/color_wellcome_step1"
+                android:textSize="@dimen/sp15" />
+
+            <TextView
+                android:id="@+id/btnVoiceSetting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_bg_app"
+                android:drawableStart="@drawable/ic_setting4"
+                android:drawableEnd="@drawable/ic_arror_right_item_setting"
+                android:drawablePadding="@dimen/dimen12"
+                android:fontFamily="@font/roboto_light"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="@dimen/dimen18"
+                android:paddingVertical="@dimen/dimen10"
+                android:text="@string/txt_item_setting2"
+                android:textColor="@color/color_wellcome_step1"
+                android:textSize="@dimen/sp15" />
+
+            <RelativeLayout
+                android:id="@+id/btnSelectTTSSeting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_bg_app"
+                android:paddingHorizontal="@dimen/dimen18"
+                android:paddingVertical="@dimen/dimen10">
+
+                <ImageView
+                    android:id="@+id/imgDrawbleLeftSelectTTSSetting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_setting5" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginHorizontal="@dimen/dimen12"
+                    android:layout_toRightOf="@+id/imgDrawbleLeftSelectTTSSetting"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_light"
+                        android:gravity="center_vertical"
+                        android:text="@string/txt_item_setting3"
+                        android:textColor="@color/color_wellcome_step1"
+                        android:textSize="@dimen/sp15" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen1"
+                        android:fontFamily="@font/roboto_light"
+                        android:gravity="start"
+                        android:text="@string/txt_item_setting20"
+                        android:textColor="@color/color_text_content_1"
+                        android:textSize="@dimen/sp13" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_arror_right_item_setting" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/btnDownloadTTSSetting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_bg_app"
+                android:drawableStart="@drawable/ic_setting5"
+                android:drawableEnd="@drawable/ic_arror_right_item_setting"
+                android:drawablePadding="@dimen/dimen12"
+                android:fontFamily="@font/roboto_light"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="@dimen/dimen18"
+                android:paddingVertical="@dimen/dimen10"
+                android:text="@string/txt_item_setting4"
+                android:textColor="@color/color_wellcome_step1"
+                android:textSize="@dimen/sp15" />
+
+            <RelativeLayout
+                android:id="@+id/btnVoiceLanguageSeting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_bg_app"
+                android:paddingHorizontal="@dimen/dimen18"
+                android:paddingVertical="@dimen/dimen10">
+
+                <ImageView
+                    android:id="@+id/imgDrawbleVoiceLGSetting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_setting6" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginHorizontal="@dimen/dimen12"
+                    android:layout_toRightOf="@+id/imgDrawbleVoiceLGSetting"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_light"
+                        android:gravity="center_vertical"
+                        android:text="@string/txt_item_setting5"
+                        android:textColor="@color/color_wellcome_step1"
+                        android:textSize="@dimen/sp15" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen1"
+                        android:fontFamily="@font/roboto_light"
+                        android:gravity="start"
+                        android:text="@string/txt_default"
+                        android:textColor="@color/color_text_content_1"
+                        android:textSize="@dimen/sp13" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_arror_right_item_setting" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/btnDownloadMoreTTSSetting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_bg_app"
+                android:drawableStart="@drawable/ic_setting7"
+                android:drawableEnd="@drawable/ic_arror_right_item_setting"
+                android:drawablePadding="@dimen/dimen12"
+                android:fontFamily="@font/roboto_light"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="@dimen/dimen18"
+                android:paddingVertical="@dimen/dimen10"
+                android:text="@string/txt_item_setting6"
+                android:textColor="@color/color_wellcome_step1"
+                android:textSize="@dimen/sp15" />
+
+            <TextView
+                android:id="@+id/btnDeviceTTSSetting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_bg_app"
+                android:drawableStart="@drawable/ic_setting9"
+                android:drawableEnd="@drawable/ic_arror_right_item_setting"
+                android:drawablePadding="@dimen/dimen12"
+                android:fontFamily="@font/roboto_light"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="@dimen/dimen18"
+                android:paddingVertical="@dimen/dimen10"
+                android:text="@string/txt_item_setting7"
+                android:textColor="@color/color_wellcome_step1"
+                android:textSize="@dimen/sp15" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_regular"
+                android:paddingHorizontal="@dimen/dimen18"
+                android:paddingVertical="@dimen/dimen12"
+                android:text="@string/txt_general_setting"
+                android:textAllCaps="false"
+                android:textColor="@color/color_wellcome_step1"
+                android:textSize="@dimen/sp16" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/btnSyncToFitSetting"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/color_bg_app"
+                    android:drawableStart="@drawable/ic_setting8"
+                    android:drawablePadding="@dimen/dimen12"
+                    android:fontFamily="@font/roboto_light"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="@dimen/dimen18"
+                    android:paddingVertical="@dimen/dimen10"
+                    android:text="@string/txt_item_setting8"
+                    android:textColor="@color/color_wellcome_step1"
+                    android:textSize="@dimen/sp15" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/switchSyncToFitSetting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:checked="false"
+                    app:switchMinWidth="@dimen/dimen30"
+                    app:thumbTint="#979797" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/btnHealthDataSetting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_bg_app"
+                android:drawableStart="@drawable/ic_setting10"
+                android:drawableEnd="@drawable/ic_arror_right_item_setting"
+                android:drawablePadding="@dimen/dimen12"
+                android:fontFamily="@font/roboto_light"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="@dimen/dimen18"
+                android:paddingVertical="@dimen/dimen10"
+                android:text="@string/txt_item_setting21"
+                android:textColor="@color/color_wellcome_step1"
+                android:textSize="@dimen/sp15" />
+
+            <TextView
+                android:id="@+id/btnRedmineSetting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_bg_app"
+                android:drawableStart="@drawable/ic_setting11"
+                android:drawableEnd="@drawable/ic_arror_right_item_setting"
+                android:drawablePadding="@dimen/dimen12"
+                android:fontFamily="@font/roboto_light"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="@dimen/dimen18"
+                android:paddingVertical="@dimen/dimen10"
+                android:text="@string/txt_item_setting9"
+                android:textColor="@color/color_wellcome_step1"
+                android:textSize="@dimen/sp15" />
+
+            <TextView
+                android:id="@+id/btnMetricSetting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_bg_app"
+                android:drawableStart="@drawable/ic_setting12"
+                android:drawableEnd="@drawable/ic_arror_right_item_setting"
+                android:drawablePadding="@dimen/dimen12"
+                android:fontFamily="@font/roboto_light"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="@dimen/dimen18"
+                android:paddingVertical="@dimen/dimen10"
+                android:text="@string/txt_item_setting10"
+                android:textColor="@color/color_wellcome_step1"
+                android:textSize="@dimen/sp15" />
+
+            <RelativeLayout
+                android:id="@+id/btnLanguageSeting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_bg_app"
+                android:paddingHorizontal="@dimen/dimen18"
+                android:paddingVertical="@dimen/dimen10">
+
+                <ImageView
+                    android:id="@+id/imgDrawbleLanguageSetting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_setting13" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginHorizontal="@dimen/dimen12"
+                    android:layout_toRightOf="@+id/imgDrawbleLanguageSetting"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_light"
+                        android:gravity="center_vertical"
+                        android:text="@string/txt_item_setting11"
+                        android:textColor="@color/color_wellcome_step1"
+                        android:textSize="@dimen/sp15" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen1"
+                        android:fontFamily="@font/roboto_light"
+                        android:gravity="start"
+                        android:text="System default"
+                        android:textColor="@color/color_text_content_1"
+                        android:textSize="@dimen/sp13" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_arror_right_item_setting" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/btnRestartSetting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_bg_app"
+                android:drawableStart="@drawable/ic_setting14"
+                android:drawableEnd="@drawable/ic_arror_right_item_setting"
+                android:drawablePadding="@dimen/dimen12"
+                android:fontFamily="@font/roboto_light"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="@dimen/dimen18"
+                android:paddingVertical="@dimen/dimen10"
+                android:text="@string/txt_item_setting12"
+                android:textColor="@color/color_wellcome_step1"
+                android:textSize="@dimen/sp15" />
+
+            <TextView
+                android:id="@+id/btnDeleteDataSetting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_bg_app"
+                android:drawableStart="@drawable/ic_setting15"
+                android:drawableEnd="@drawable/ic_arror_right_item_setting"
+                android:drawablePadding="@dimen/dimen12"
+                android:fontFamily="@font/roboto_light"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="@dimen/dimen18"
+                android:paddingVertical="@dimen/dimen10"
+                android:text="@string/txt_item_setting13"
+                android:textColor="@color/color_wellcome_step1"
+                android:textSize="@dimen/sp15" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_regular"
+                android:paddingHorizontal="@dimen/dimen18"
+                android:paddingVertical="@dimen/dimen12"
+                android:text="@string/txt_support_us"
+                android:textAllCaps="false"
+                android:textColor="@color/color_wellcome_step1"
+                android:textSize="@dimen/sp16" />
+
+            <TextView
+                android:id="@+id/btnRateUsSetting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_bg_app"
+                android:drawableStart="@drawable/ic_setting15"
+                android:drawableEnd="@drawable/ic_arror_right_item_setting"
+                android:drawablePadding="@dimen/dimen12"
+                android:fontFamily="@font/roboto_light"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="@dimen/dimen18"
+                android:paddingVertical="@dimen/dimen10"
+                android:text="@string/txt_item_setting14"
+                android:textColor="@color/color_wellcome_step1"
+                android:textSize="@dimen/sp15" />
+
+            <TextView
+                android:id="@+id/btnShareFriendsSetting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_bg_app"
+                android:drawableStart="@drawable/ic_setting16"
+                android:drawableEnd="@drawable/ic_arror_right_item_setting"
+                android:drawablePadding="@dimen/dimen12"
+                android:fontFamily="@font/roboto_light"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="@dimen/dimen18"
+                android:paddingVertical="@dimen/dimen10"
+                android:text="@string/txt_item_setting15"
+                android:textColor="@color/color_wellcome_step1"
+                android:textSize="@dimen/sp15" />
+
+            <TextView
+                android:id="@+id/btnFeedBackSetting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_bg_app"
+                android:drawableStart="@drawable/ic_setting17"
+                android:drawableEnd="@drawable/ic_arror_right_item_setting"
+                android:drawablePadding="@dimen/dimen12"
+                android:fontFamily="@font/roboto_light"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="@dimen/dimen18"
+                android:paddingVertical="@dimen/dimen10"
+                android:text="@string/txt_item_setting16"
+                android:textColor="@color/color_wellcome_step1"
+                android:textSize="@dimen/sp15" />
+
+            <TextView
+                android:id="@+id/btnPolicySetting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_bg_app"
+                android:drawableStart="@drawable/ic_setting18"
+                android:drawableEnd="@drawable/ic_arror_right_item_setting"
+                android:drawablePadding="@dimen/dimen12"
+                android:fontFamily="@font/roboto_light"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="@dimen/dimen18"
+                android:paddingVertical="@dimen/dimen10"
+                android:text="@string/txt_item_setting17"
+                android:textColor="@color/color_wellcome_step1"
+                android:textSize="@dimen/sp15" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_bg_app"
+                android:drawablePadding="@dimen/dimen12"
+                android:fontFamily="@font/roboto_light"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="@dimen/dimen18"
+                android:paddingVertical="@dimen/dimen4"
+                android:textColor="@color/color_wellcome_step1"
+                android:textSize="@dimen/sp15" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/dimen6"
+                android:layout_marginBottom="@dimen/dimen30"
+                android:fontFamily="@font/roboto_light"
+                android:gravity="start"
+                android:text="Version1.1.8H"
+                android:textColor="@color/color_text_content_1"
+                android:textSize="@dimen/sp13" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>
